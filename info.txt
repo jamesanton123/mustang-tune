@@ -1,0 +1,14 @@
+Use specs from for lightning 90mm maf
+	http://www.efidynotuning.com/maf.htm
+	copy and paste them into "FN 036"
+	
+egr and thermactor are disabled by default in a9l2
+
+TODO:
+	SARCHG			Cubic Inch Displacement
+	ALOSL, AHISL	Injector Slopes	Input your injector's manufacturer's recommended values if available or scaled percentage, see Note** below for no data 
+	FN 389			Injector Breakpoint
+	FN 367			Injector Offset	
+	FN 904A			Sealevel Spark Table
+	FN 035			Load Scaling
+	FN 348			Crank PW

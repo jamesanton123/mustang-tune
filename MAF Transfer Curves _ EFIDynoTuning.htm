@@ -1,0 +1,1682 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><title>MAF Transfer Curves / EFIDynoTuning</title>
+</head><body>
+<font face="calibri">
+
+<center><h2><u>MAF Transfer Curves</u></h2>
+<br><font size="2">Posted: 10-31-2013<br>Last Updated: 2-23-2016</font></center>
+
+
+<h3>MAF Flow Transfer</h3>
+Select your MAF in the following drop down menu, the MAF curve's listed are based on published data and are
+displayed in kg/hr flows for direct copying and pasting into your tuning software.
+These flow curves are ACTUAL unscaled curves, be sure to divide these curves by your <a href="http://www.efidynotuning.com/scaling.htm">SCALING PERCENTAGE</a>.
+The curves with " - PMAS" are ACTUAL FLOW CURVES from PMAS' flow bench using a conical filter.  See the <a href="http://www.efidynotuning.com/maf101.htm">MAF</a>
+write up for more details as well as wiring diagrams.
+<br>
+<br>
+
+
+<form name="maf">
+<select name="curve">
+<option value="index.htm">Select MAF</option>
+<option value=""></option>
+<option value="3000">SCT BA2800 / BA3000 - PMAS</option>
+<option value="abaco85dbx">Abaco DBX 85mm UNSCALED</option>
+<option value="fox60">Fox - 60lb "Calibrated"</option>
+<option value="sim_fox42">Fox - 42lb "Calibrated" - SIMPLIFIED</option>
+<option value="sim_fox36">Fox - 36lb "Calibrated" - SIMPLIFIED</option>
+<option value="sim_fox30">Fox - 30lb "Calibrated" - SIMPLIFIED - PMAS</option>
+<option value="fox30">Fox - 30lb "Calibrated"</option>
+<option value="sim_fox24">Fox - 24lb "Calibrated" - SIMPLIFIED</option>
+<option value="fox24">Fox - 24lb "Calibrated"</option>
+<option value=""></option>
+<option value="sct24">SCT BA2400 - PMAS</option>
+<option value="sim_sct24">SCT BA2400 - PMAS (Simplified)</option>
+<option value=""></option>
+<option value="hpx4">HPX Slot 4" - PMAS</option>
+<option value="sim_hpx4">HPX Slot 4" - Simplified</option>
+<option value="hpx375">HPX Slot 3.75" - PMAS</option>
+<option value="hpx35">HPX Slot 3.5" - PMAS</option>
+<option value="hpx325">HPX Slot 3.25" - PMAS</option>
+<option value="hpx3">HPX Slot 3" - PMAS</option>
+<option value="hpx25">HPX Slot 2.5" - PMAS</option>
+<option value=""></option>
+<option value="90ford.25">90mm Ford (lightning/cobra)- PMAS SIMPLIFIED</option>
+<option value="90ford" selected="selected">90mm Ford (lightning/cobra)- PMAS</option>
+<option value="oem80lightning">80mm Lightning</option>
+<option value=""></option>
+<option value="slot4">OEM Slot 4" (102mm)</option>
+<option value="slot35">OEM Slot 3-1/2" (90mm)</option>
+<option value="slot31">OEM Slot 3.1" (79mm)</option>
+<option value="slot3">OEM Slot 3" (77mm)</option>
+<option value=""></option>
+<option value="5.4">Stock - Ford 1999-2004 F-150 &amp; F-250 5.4L - decipha</option>
+<option value="pcc1">Stock - Ford '98 Explorer 5.0L</option>
+<option value="96gt">Stock - Ford '96 - '97 Mustang GT 4.6L</option>
+<option value="mn1250">Stock - Ford '91 - '93 Tbird/Cougar 5.0L</option>
+<option value="x2s2">Stock - Ford '90 - '91 Tbird/Cougar 3.8L</option>
+<option value="spp5">Stock - Ford '96 - '97 Tbird/Cougar 3.8L</option>
+<option value="mn1238">Stock - Ford '94 - '95 Tbird/Cougar 3.8L - 70mm</option>
+<option value="a4a1">Stock - Lincoln '94 Town Car</option>
+<option value=""></option>
+<option value="stockfox">Stock - Ford '91 Foxbody - PMAS</option>
+<option value="07gt500">Stock - Ford '07 GT500 - PMAS</option>
+<option value="98gt">Stock - Ford '98 GT Stang - PMAS</option>
+<option value="80lightning">Stock - Ford - '99 - '00 Lightning 80mm - PMAS</option>
+<option value=""></option>
+<option value="j4j1">Stock / Ford - '94-'95 Cobra</option>
+<option value="sim_97cobra">Stock / Ford - 96 - 98 Cobra - 80mm - SIMPLIFIED</option>
+<option value="97cobra">Stock / Ford - 96 - 98 Cobra - 80mm</option>
+<option value="98mark8">Stock / Lincoln - '98 Mark-VIII - 80mm</option>
+<option value=""></option>
+<option value="90sc">Stock 89-90 SC &amp; '93 Cobra - 70mm - PMAS</option>
+</select>
+<br><font size="1"><a href="http://www.efidynotuning.com/maf.htm">CLEAR LOADED MAF CURVES</a></font>
+<br><input onclick="document.getElementById(document.maf.curve.options[document.maf.curve.selectedIndex].value).style.display='block'; return false;" value="Load" type="button">
+</form>
+
+<div style="display: none;" id="90sc">
+<hr><p>Stock 89-90 SC &amp; '93 Cobra - 70mm -PMAS</p>
+<table style="float: left;" border="1">	
+<tbody><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1153.923
+</td></tr><tr><td>5.000</td><td>1153.923	
+</td></tr><tr><td>4.836</td><td>1062.694
+</td></tr><tr><td>4.672</td><td>975.688	
+</td></tr><tr><td>4.509</td><td>892.806	
+</td></tr><tr><td>4.345</td><td>813.742	
+</td></tr><tr><td>4.181</td><td>738.288	
+</td></tr><tr><td>4.017</td><td>666.423	
+</td></tr><tr><td>3.853</td><td>598.295	
+</td></tr><tr><td>3.690</td><td>534.147	
+</td></tr><tr><td>3.526</td><td>474.234	
+</td></tr><tr><td>3.362</td><td>418.755	
+</td></tr><tr><td>3.198</td><td>367.810	
+</td></tr><tr><td>3.034</td><td>321.379	
+</td></tr><tr><td>2.871</td><td>279.337	
+</td></tr><tr><td>2.707</td><td>241.468	
+</td></tr><tr><td>2.543</td><td>207.507	
+</td></tr><tr><td>2.379</td><td>177.167	
+</td></tr><tr><td>2.216</td><td>150.163	
+</td></tr><tr><td>2.052</td><td>126.232	
+</td></tr><tr><td>1.888</td><td>105.135	
+</td></tr><tr><td>1.724</td><td>86.651	
+</td></tr><tr><td>1.560</td><td>70.569
+</td></tr><tr><td>1.397</td><td>56.678	
+</td></tr><tr><td>1.233</td><td>44.765	
+</td></tr><tr><td>1.069</td><td>34.624	
+</td></tr><tr><td>0.905</td><td>26.079	
+</td></tr><tr><td>0.741</td><td>19.006	
+</td></tr><tr><td>0.578</td><td>13.342	
+</td></tr><tr><td>0.000</td><td>0.00	
+</td></tr></tbody></table>
+
+
+SIMPLIFIED
+<table border="1"><tbody><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1153.91
+</td></tr><tr><td>5.00</td><td>1153.91	
+</td></tr><tr><td>4.75</td><td>1016.4
+</td></tr><tr><td>4.50</td><td>888.09	
+</td></tr><tr><td>4.25</td><td>771.17	
+</td></tr><tr><td>4.00</td><td>658.38	
+</td></tr><tr><td>3.75</td><td>558.26	
+</td></tr><tr><td>3.50</td><td>464.48	
+</td></tr><tr><td>3.25</td><td>383.69	
+</td></tr><tr><td>3.00</td><td>313.35	
+</td></tr><tr><td>2.75</td><td>250.93	
+</td></tr><tr><td>2.50</td><td>199.92
+</td></tr><tr><td>2.25</td><td>155.25	
+</td></tr><tr><td>2.00</td><td>119.45	
+</td></tr><tr><td>1.75</td><td>89.66	
+</td></tr><tr><td>1.50</td><td>65.27	
+</td></tr><tr><td>1.25</td><td>45.94	
+</td></tr><tr><td>1.00</td><td>30.73	
+</td></tr><tr><td>0.75</td><td>19.33	
+</td></tr><tr><td>0.50</td><td>11.41	
+</td></tr><tr><td>0.25</td><td>5.70	
+</td></tr><tr><td>0.05</td><td>1.27	
+</td></tr><tr><td>0.00</td><td>0
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr></tbody></table>
+<hr></div>
+
+
+<div style="display: none;" id="98mark8">
+<hr><p>Stock / '98 Mark VIII - 80mm</p>
+<table border="1">	
+<tbody><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1104.411
+</td></tr><tr><td>5.115</td><td>1104.411	
+</td></tr><tr><td>4.900</td><td>970.093
+</td></tr><tr><td>4.600</td><td>803.787	
+</td></tr><tr><td>4.350</td><td>682.207	
+</td></tr><tr><td>4.100</td><td>574.922	
+</td></tr><tr><td>3.900</td><td>498.634	
+</td></tr><tr><td>3.700</td><td>428.290	
+</td></tr><tr><td>3.500</td><td>367.429	
+</td></tr><tr><td>3.300</td><td>313.221	
+</td></tr><tr><td>3.100</td><td>265.240	
+</td></tr><tr><td>2.900</td><td>222.920	
+</td></tr><tr><td>2.700</td><td>185.838	
+</td></tr><tr><td>2.500</td><td>153.426	
+</td></tr><tr><td>2.300</td><td>124.128	
+</td></tr><tr><td>2.100</td><td>101.057	
+</td></tr><tr><td>1.900</td><td>79.544	
+</td></tr><tr><td>1.700</td><td>62.701	
+</td></tr><tr><td>1.500</td><td>48.689	
+</td></tr><tr><td>1.400</td><td>42.461	
+</td></tr><tr><td>1.300</td><td>36.800	
+</td></tr><tr><td>1.200</td><td>31.704	
+</td></tr><tr><td>1.100</td><td>27.175	
+</td></tr><tr><td>1.000</td><td>23.070	
+</td></tr><tr><td>0.800</td><td>15.852	
+</td></tr><tr><td>0.700</td><td>13.021	
+</td></tr><tr><td>0.600</td><td>10.474	
+</td></tr><tr><td>0.500</td><td>8.351	
+</td></tr><tr><td>0.000</td><td>0.00	
+</td></tr><tr><td>0.000</td><td>0.00	
+</td></tr></tbody></table><hr></div>
+
+
+<div style="display: none;" id="97cobra">
+<hr><p>Stock '96 - 98 Cobra - 80mm</p>
+<table border="1">	
+<tbody><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1145.77
+</td></tr><tr><td>5.00</td><td>1145.77	
+</td></tr><tr><td>4.40</td><td>809.28	
+</td></tr><tr><td>4.25</td><td>736.85	
+</td></tr><tr><td>4.00</td><td>627.49	
+</td></tr><tr><td>3.80</td><td>555.06	
+</td></tr><tr><td>3.60</td><td>480.92	
+</td></tr><tr><td>3.40</td><td>416.47	
+</td></tr><tr><td>3.20</td><td>353.88	
+</td></tr><tr><td>3.00</td><td>298.13	
+</td></tr><tr><td>2.85</td><td>249.09	
+</td></tr><tr><td>2.60</td><td>205.88	
+</td></tr><tr><td>2.40</td><td>172.52	
+</td></tr><tr><td>2.20</td><td>140.30	
+</td></tr><tr><td>2.10</td><td>126.33	
+</td></tr><tr><td>2.00</td><td>112.78	
+</td></tr><tr><td>1.90</td><td>100.09	
+</td></tr><tr><td>1.80</td><td>88.97	
+</td></tr><tr><td>1.70</td><td>79.42	
+</td></tr><tr><td>1.60</td><td>69.86	
+</td></tr><tr><td>1.50</td><td>59.46	
+</td></tr><tr><td>1.20</td><td>39.21	
+</td></tr><tr><td>1.00</td><td>27.80	
+</td></tr><tr><td>0.90</td><td>22.53	
+</td></tr><tr><td>0.75</td><td>16.68	
+</td></tr><tr><td>0.54</td><td>10.69	
+</td></tr><tr><td>0.00</td><td>0.00	
+</td></tr><tr><td>0.00</td><td>0.00	
+</td></tr><tr><td>0.00</td><td>0.00	
+</td></tr><tr><td>0.00</td><td>0.00	
+</td></tr></tbody></table><hr></div>
+
+
+<div style="display: none;" id="sim_97cobra">
+<hr><p>Stock '97/98 Cobra - 80mm - SIMPLIFIED</p>
+<table border="1">	
+<tbody><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1145.7
+</td></tr><tr><td>5.000</td><td>1082.7	
+</td></tr><tr><td>4.750</td><td>946.0	
+</td></tr><tr><td>4.500</td><td>809.2	
+</td></tr><tr><td>4.250</td><td>693.0	
+</td></tr><tr><td>4.000</td><td>591.0	
+</td></tr><tr><td>3.750</td><td>503.5	
+</td></tr><tr><td>3.500</td><td>423.0	
+</td></tr><tr><td>3.250</td><td>346.0	
+</td></tr><tr><td>3.000</td><td>280.0	
+</td></tr><tr><td>2.750</td><td>224.0	
+</td></tr><tr><td>2.500</td><td>179.5	
+</td></tr><tr><td>2.250</td><td>139.5	
+</td></tr><tr><td>2.000</td><td>106.5	
+</td></tr><tr><td>1.750</td><td>80.25	
+</td></tr><tr><td>1.500</td><td>56.5	
+</td></tr><tr><td>1.250</td><td>40.25	
+</td></tr><tr><td>1.000</td><td>26.58	
+</td></tr><tr><td>0.750</td><td>16.15	
+</td></tr><tr><td>0.500</td><td>9.8	
+</td></tr><tr><td>0.250</td><td>4.9	
+</td></tr><tr><td>0.050</td><td>1.0	
+</td></tr><tr><td>0.000</td><td>0.0	
+</td></tr><tr><td>0.000</td><td>0.0	
+</td></tr><tr><td>0.000</td><td>0.0	
+</td></tr><tr><td>0.000</td><td>0.0	
+</td></tr><tr><td>0.000</td><td>0.0	
+</td></tr><tr><td>0.000</td><td>0.0	
+</td></tr><tr><td>0.000</td><td>0.0	
+</td></tr><tr><td>0.000</td><td>0.0	
+</td></tr></tbody></table><hr></div>
+
+
+<div style="display: none;" id="j4j1">
+<hr><p>Stock '94/95 Cobra</p>
+<table border="1">	
+<tbody><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>882.07
+</td></tr><tr><td>5.000</td><td>882.07	
+</td></tr><tr><td>4.600</td><td>717.31	
+</td></tr><tr><td>4.200</td><td>568.72	
+</td></tr><tr><td>3.800</td><td>443.57	
+</td></tr><tr><td>3.500</td><td>362.46	
+</td></tr><tr><td>3.300</td><td>313.98	
+</td></tr><tr><td>3.100</td><td>270.26	
+</td></tr><tr><td>2.900</td><td>230.66	
+</td></tr><tr><td>2.700</td><td>195.49	
+</td></tr><tr><td>2.500</td><td>163.17	
+</td></tr><tr><td>2.400</td><td>148.28	
+</td></tr><tr><td>2.300</td><td>134.97	
+</td></tr><tr><td>2.200</td><td>122.30	
+</td></tr><tr><td>2.100</td><td>110.89	
+</td></tr><tr><td>2.000</td><td>100.12	
+</td></tr><tr><td>1.900</td><td>89.98	
+</td></tr><tr><td>1.800</td><td>80.79	
+</td></tr><tr><td>1.700</td><td>72.24	
+</td></tr><tr><td>1.600</td><td>64.32	
+</td></tr><tr><td>1.500</td><td>57.03	
+</td></tr><tr><td>1.400</td><td>50.38	
+</td></tr><tr><td>1.300</td><td>44.36	
+</td></tr><tr><td>1.200</td><td>38.97	
+</td></tr><tr><td>1.000</td><td>29.15	
+</td></tr><tr><td>0.900</td><td>25.03	
+</td></tr><tr><td>0.800</td><td>21.23	
+</td></tr><tr><td>0.600</td><td>14.57	
+</td></tr><tr><td>0.500</td><td>11.72	
+</td></tr><tr><td>0.000</td><td>11.72	
+</td></tr></tbody></table><hr></div>
+
+
+<div style="display: none;" id="80lightning">
+<hr>
+<p>Stock '99 - '00 Lightning 80mm - PMAS</p>
+<table border="1">	
+<tbody><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1611.855	
+</td></tr><tr><td>5.00</td><td>1611.855	
+</td></tr><tr><td>4.80</td><td>1430.021	
+</td></tr><tr><td>4.60</td><td>1263.062
+</td></tr><tr><td>4.40</td><td>1110.256	
+</td></tr><tr><td>4.20</td><td>970.891	
+</td></tr><tr><td>4.00</td><td>844.263	
+</td></tr><tr><td>3.80</td><td>729.679	
+</td></tr><tr><td>3.60</td><td>626.456	
+</td></tr><tr><td>3.40</td><td>533.919	
+</td></tr><tr><td>3.20</td><td>451.407	
+</td></tr><tr><td>3.00</td><td>378.266	
+</td></tr><tr><td>2.80</td><td>313.857	
+</td></tr><tr><td>2.60</td><td>257.550	
+</td></tr><tr><td>2.40</td><td>208.728	
+</td></tr><tr><td>2.20</td><td>166.787	
+</td></tr><tr><td>2.00</td><td>131.135	
+</td></tr><tr><td>1.80</td><td>101.196	
+</td></tr><tr><td>1.60</td><td>76.405	
+</td></tr><tr><td>1.40</td><td>56.215	
+</td></tr><tr><td>1.20</td><td>40.093	
+</td></tr><tr><td>1.00</td><td>27.526	
+</td></tr><tr><td>0.80</td><td>18.015	
+</td></tr><tr><td>0.60</td><td>11.083	
+</td></tr><tr><td>0.40</td><td>6.276	
+</td></tr><tr><td>0.20</td><td>3.161	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr></tbody></table><hr></div>
+
+<div style="display: none;" id="98gt">
+<hr>
+<p>Stock '98 GT - PMAS</p>
+<table border="1">	
+<tbody><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1210	
+</td></tr><tr><td>5.000</td><td>1210	
+</td></tr><tr><td>4.816</td><td>1048.5	
+</td></tr><tr><td>4.598</td><td>899.10	
+</td></tr><tr><td>4.177</td><td>699.30	
+</td></tr><tr><td>3.936</td><td>600.30	
+</td></tr><tr><td>3.674</td><td>502.10	
+</td></tr><tr><td>3.528</td><td>451.00	
+</td></tr><tr><td>3.357</td><td>399.80	
+</td></tr><tr><td>3.197</td><td>351.60	
+</td></tr><tr><td>2.998</td><td>299.90	
+</td></tr><tr><td>2.800</td><td>251.10	
+</td></tr><tr><td>2.608</td><td>210.20	
+</td></tr><tr><td>2.404</td><td>171.60	
+</td></tr><tr><td>2.283</td><td>150.90	
+</td></tr><tr><td>2.001</td><td>109.10	
+</td></tr><tr><td>1.916</td><td>98.50	
+</td></tr><tr><td>1.854</td><td>91.40	
+</td></tr><tr><td>1.759</td><td>80.90	
+</td></tr><tr><td>1.655</td><td>70.30	
+</td></tr><tr><td>1.536</td><td>59.70	
+</td></tr><tr><td>1.385</td><td>49.50	
+</td></tr><tr><td>1.334</td><td>46.00	
+</td></tr><tr><td>1.226</td><td>38.90	
+</td></tr><tr><td>1.102</td><td>31.80	
+</td></tr><tr><td>0.959</td><td>24.90	
+</td></tr><tr><td>0.883</td><td>21.30	
+</td></tr><tr><td>0.792</td><td>17.80	
+</td></tr><tr><td>0.564</td><td>10.70	
+</td></tr><tr><td>0.000</td><td>0	
+</td></tr></tbody></table><hr></div>
+
+<div style="display: none;" id="07gt500">
+<hr>
+<p>Stock '07 GT500 - PMAS</p>
+<table border="1">	
+<tbody><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1890	
+</td></tr><tr><td>5.000</td><td>1890	
+</td></tr><tr><td>4.759</td><td>1611.72	
+</td></tr><tr><td>4.513</td><td>1375.40	
+</td></tr><tr><td>4.263</td><td>1175.78	
+</td></tr><tr><td>4.022</td><td>1005.81	
+</td></tr><tr><td>3.818</td><td>860.24	
+</td></tr><tr><td>3.602</td><td>735.69	
+</td></tr><tr><td>3.402</td><td>632.16	
+</td></tr><tr><td>3.214</td><td>541.45	
+</td></tr><tr><td>3.030</td><td>463.80	
+</td></tr><tr><td>2.856</td><td>397.54	
+</td></tr><tr><td>2.686</td><td>340.14	
+</td></tr><tr><td>2.362</td><td>250.01	
+</td></tr><tr><td>2.072</td><td>185.16	
+</td></tr><tr><td>1.802</td><td>135.05	
+</td></tr><tr><td>1.683</td><td>117.04	
+</td></tr><tr><td>1.444</td><td>85.20	
+</td></tr><tr><td>1.329</td><td>72.71	
+</td></tr><tr><td>1.227</td><td>62.35	
+</td></tr><tr><td>1.149</td><td>54.85	
+</td></tr><tr><td>1.009</td><td>43.01	
+</td></tr><tr><td>0.935</td><td>37.74	
+</td></tr><tr><td>0.859</td><td>32.90	
+</td></tr><tr><td>0.762</td><td>27.45	
+</td></tr><tr><td>0.671</td><td>22.98	
+</td></tr><tr><td>0.521</td><td>17.34	
+</td></tr><tr><td>0.345</td><td>12.11	
+</td></tr><tr><td>0.254</td><td>10.11	
+</td></tr><tr><td>0.000</td><td>0	
+</td></tr></tbody></table><hr></div>
+
+<div style="display: none;" id="stockfox">
+Stock Foxbody	
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>922.72	
+</td></tr><tr><td>5.000</td><td>922.72	
+</td></tr><tr><td>4.836</td><td>847.26	
+</td></tr><tr><td>4.672</td><td>775.90	
+</td></tr><tr><td>4.509</td><td>708.87	
+</td></tr><tr><td>4.345</td><td>646.18	
+</td></tr><tr><td>4.181</td><td>587.64	
+</td></tr><tr><td>4.017</td><td>532.96	
+</td></tr><tr><td>3.853</td><td>481.84	
+</td></tr><tr><td>3.690</td><td>433.97	
+</td></tr><tr><td>3.526</td><td>389.13	
+</td></tr><tr><td>3.362</td><td>347.17	
+</td></tr><tr><td>3.198</td><td>308.01	
+</td></tr><tr><td>3.034</td><td>271.66	
+</td></tr><tr><td>2.871</td><td>238.17	
+</td></tr><tr><td>2.707</td><td>207.58	
+</td></tr><tr><td>2.543</td><td>179.92	
+</td></tr><tr><td>2.379</td><td>155.16	
+</td></tr><tr><td>2.216</td><td>133.19	
+</td></tr><tr><td>2.052</td><td>113.81	
+</td></tr><tr><td>1.888</td><td>96.75	
+</td></tr><tr><td>1.724</td><td>81.69	
+</td></tr><tr><td>1.560</td><td>68.29	
+</td></tr><tr><td>1.397</td><td>56.25	
+</td></tr><tr><td>1.233</td><td>45.35	
+</td></tr><tr><td>1.069</td><td>35.54	
+</td></tr><tr><td>0.905</td><td>26.89	
+</td></tr><tr><td>0.741</td><td>19.61	
+</td></tr><tr><td>0.578</td><td>13.96	
+</td></tr><tr><td>0.000</td><td>0	
+</td></tr></tbody></table></div>
+
+<div style="display: none;" id="a4a1">
+Stock Lincoln 94' Town Car 4.6L V8
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1020.52	
+</td></tr><tr><td>5.000</td><td>1020.52	
+</td></tr><tr><td>4.400</td><td>670.74	
+</td></tr><tr><td>4.200</td><td>592.16	
+</td></tr><tr><td>4.000</td><td>520.87	
+</td></tr><tr><td>3.850</td><td>471.45	
+</td></tr><tr><td>3.700</td><td>425.51	
+</td></tr><tr><td>3.550</td><td>382.42	
+</td></tr><tr><td>3.400</td><td>345.35	
+</td></tr><tr><td>3.250</td><td>306.38	
+</td></tr><tr><td>3.100</td><td>272.16	
+</td></tr><tr><td>2.950</td><td>240.48	
+</td></tr><tr><td>2.800</td><td>211.65	
+</td></tr><tr><td>2.650</td><td>185.66	
+</td></tr><tr><td>2.500</td><td>162.85	
+</td></tr><tr><td>2.350</td><td>140.99
+</td></tr><tr><td>2.200</td><td>121.03	
+</td></tr><tr><td>2.050</td><td>104.56	
+</td></tr><tr><td>1.900</td><td>87.13	
+</td></tr><tr><td>1.750</td><td>75.09	
+</td></tr><tr><td>1.600</td><td>64.32	
+</td></tr><tr><td>1.450</td><td>52.28	
+</td></tr><tr><td>1.300</td><td>42.14	
+</td></tr><tr><td>1.150</td><td>34.53	
+</td></tr><tr><td>1.000</td><td>27.25	
+</td></tr><tr><td>0.850</td><td>21.54	
+</td></tr><tr><td>0.700</td><td>16.79	
+</td></tr><tr><td>0.550</td><td>12.67	
+</td></tr><tr><td>0.400</td><td>8.87	
+</td></tr><tr><td>0.000</td><td>8.87	
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="spp5">
+Stock 96' - 97' Thunderbird/Cougar 3.8L	
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>851.20	
+</td></tr><tr><td>4.900</td><td>851.20
+</td></tr><tr><td>4.540</td><td>701.20	
+</td></tr><tr><td>4.410</td><td>649.16	
+</td></tr><tr><td>4.275</td><td>600.12	
+</td></tr><tr><td>4.135</td><td>551.07	
+</td></tr><tr><td>3.985</td><td>502.16	
+</td></tr><tr><td>3.835</td><td>443.99	
+</td></tr><tr><td>3.580</td><td>376.55	
+</td></tr><tr><td>3.325</td><td>315.39	
+</td></tr><tr><td>3.070</td><td>258.35	
+</td></tr><tr><td>2.660</td><td>175.80	
+</td></tr><tr><td>2.455</td><td>146.00	
+</td></tr><tr><td>2.250</td><td>118.20
+</td></tr><tr><td>2.150</td><td>106.22	
+</td></tr><tr><td>2.045</td><td>95.53
+</td></tr><tr><td>1.945</td><td>85.12	
+</td></tr><tr><td>1.840</td><td>75.28	
+</td></tr><tr><td>1.740</td><td>67.30	
+</td></tr><tr><td>1.635</td><td>58.74	
+</td></tr><tr><td>1.535</td><td>53.04	
+</td></tr><tr><td>1.430</td><td>45.91	
+</td></tr><tr><td>1.230</td><td>34.65	
+</td></tr><tr><td>1.025</td><td>24.95	
+</td></tr><tr><td>0.820</td><td>17.54	
+</td></tr><tr><td>0.765</td><td>15.68	
+</td></tr><tr><td>0.715</td><td>14.83	
+</td></tr><tr><td>0.650</td><td>12.55	
+</td></tr><tr><td>0.570</td><td>10.69	
+</td></tr><tr><td>0.000</td><td>0.00	
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="x2s2">
+Stock 90' - 91' MN12 3.8L V6	
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>790.5	
+</td></tr><tr><td>5.000</td><td>790.5	
+</td></tr><tr><td>4.750</td><td>790.5	
+</td></tr><tr><td>4.500</td><td>685.31	
+</td></tr><tr><td>4.250</td><td>590.58	
+</td></tr><tr><td>4.000</td><td>505.67	
+</td></tr><tr><td>3.800</td><td>444.20	
+</td></tr><tr><td>3.600</td><td>388.44	
+</td></tr><tr><td>3.400</td><td>337.74	
+</td></tr><tr><td>3.200</td><td>291.80	
+</td></tr><tr><td>3.000</td><td>250.62	
+</td></tr><tr><td>2.800</td><td>213.86	
+</td></tr><tr><td>2.600</td><td>180.60	
+</td></tr><tr><td>2.400</td><td>151.45
+</td></tr><tr><td>2.200</td><td>125.78
+</td></tr><tr><td>2.100</td><td>114.06
+</td></tr><tr><td>2.000</td><td>102.97
+</td></tr><tr><td>1.900</td><td>92.83
+</td></tr><tr><td>1.800</td><td>83.33
+</td></tr><tr><td>1.700</td><td>74.46	
+</td></tr><tr><td>1.600</td><td>66.54	
+</td></tr><tr><td>1.500</td><td>58.93	
+</td></tr><tr><td>1.400</td><td>51.96	
+</td></tr><tr><td>1.300</td><td>45.62
+</td></tr><tr><td>1.200</td><td>39.60
+</td></tr><tr><td>1.000</td><td>29.47
+</td></tr><tr><td>0.800</td><td>21.23
+</td></tr><tr><td>0.600</td><td>14.57
+</td></tr><tr><td>0.400</td><td>9.51	
+</td></tr><tr><td>0.000</td><td>9.51
+</td></tr></tbody></table></div>
+
+
+
+<div style="display: none;" id="mn1238">
+Stock 94' - 95' MN12 3.8L	
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1035.41	
+</td></tr><tr><td>5.000</td><td>1035.41	
+</td></tr><tr><td>4.750</td><td>888.40	
+</td></tr><tr><td>4.500</td><td>757.55	
+</td></tr><tr><td>4.250</td><td>641.91	
+</td></tr><tr><td>4.000</td><td>539.88	
+</td></tr><tr><td>3.750</td><td>450.54	
+</td></tr><tr><td>3.500</td><td>381.15	
+</td></tr><tr><td>3.250</td><td>313.03	
+</td></tr><tr><td>3.000</td><td>258.54	
+</td></tr><tr><td>2.600</td><td>176.79	
+</td></tr><tr><td>2.400</td><td>140.99	
+</td></tr><tr><td>2.200</td><td>114.69	
+</td></tr><tr><td>2.100</td><td>103.29
+</td></tr><tr><td>2.000</td><td>93.78	
+</td></tr><tr><td>1.900</td><td>83.01	
+</td></tr><tr><td>1.800</td><td>74.77	
+</td></tr><tr><td>1.600</td><td>57.66	
+</td></tr><tr><td>1.500</td><td>50.38	
+</td></tr><tr><td>1.200</td><td>32.32	
+</td></tr><tr><td>1.000</td><td>23.45	
+</td></tr><tr><td>0.700</td><td>12.36	
+</td></tr><tr><td>0.400</td><td>6.34	
+</td></tr><tr><td>0.000</td><td>6.34	
+</td></tr><tr><td>0.000</td><td>0	
+</td></tr><tr><td>0.000</td><td>0	
+</td></tr><tr><td>0.000</td><td>0	
+</td></tr><tr><td>0.000</td><td>0	
+</td></tr><tr><td>0.000</td><td>0	
+</td></tr><tr><td>0.000</td><td>0	
+</td></tr></tbody></table></div>
+
+<div style="display: none;" id="mn1250">
+Stock 91' - 93' MN12 5.0L	
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>965.39	
+</td></tr><tr><td>5.000</td><td>965.39	
+</td></tr><tr><td>4.750</td><td>840.24	
+</td></tr><tr><td>4.500</td><td>727.45	
+</td></tr><tr><td>4.250</td><td>626.38	
+</td></tr><tr><td>4.000</td><td>535.45	
+</td></tr><tr><td>3.800</td><td>470.18	
+</td></tr><tr><td>3.600</td><td>410.62	
+</td></tr><tr><td>3.400</td><td>356.75	
+</td></tr><tr><td>3.200</td><td>308.28	
+</td></tr><tr><td>3.000</td><td>264.56	
+</td></tr><tr><td>2.800</td><td>225.27	
+</td></tr><tr><td>2.600</td><td>190.42	
+</td></tr><tr><td>2.400</td><td>159.68	
+</td></tr><tr><td>2.200</td><td>132.44	
+</td></tr><tr><td>2.100</td><td>120.08	
+</td></tr><tr><td>2.000</td><td>108.67	
+</td></tr><tr><td>1.900</td><td>97.90	
+</td></tr><tr><td>1.800</td><td>87.76	
+</td></tr><tr><td>1.700</td><td>78.57	
+</td></tr><tr><td>1.600</td><td>70.02	
+</td></tr><tr><td>1.500</td><td>62.10	
+</td></tr><tr><td>1.400</td><td>54.81	
+</td></tr><tr><td>1.200</td><td>41.51	
+</td></tr><tr><td>1.000</td><td>30.42	
+</td></tr><tr><td>0.800</td><td>21.86	
+</td></tr><tr><td>0.600</td><td>15.52	
+</td></tr><tr><td>0.000</td><td>15.52	
+</td></tr><tr><td>0.000</td><td>15.52	
+</td></tr><tr><td>0.000</td><td>15.52	
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="96gt">
+Stock - Ford '96 - '97 Mustang GT 4.6L
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1209.50	
+</td></tr><tr><td>5.115</td><td>1209.50	
+</td></tr><tr><td>4.810</td><td>998.20	
+</td></tr><tr><td>4.400</td><td>790.03	
+</td></tr><tr><td>4.090</td><td>649.16	
+</td></tr><tr><td>3.785</td><td>523.55	
+</td></tr><tr><td>3.480</td><td>413.34	
+</td></tr><tr><td>3.275</td><td>352.17	
+</td></tr><tr><td>3.070</td><td>296.14	
+</td></tr><tr><td>2.865</td><td>248.94	
+</td></tr><tr><td>2.660</td><td>203.89	
+</td></tr><tr><td>2.455</td><td>168.67	
+</td></tr><tr><td>2.250</td><td>136.88	
+</td></tr><tr><td>2.045</td><td>108.36	
+</td></tr><tr><td>1.945</td><td>95.53	
+</td></tr><tr><td>1.840</td><td>84.26	
+</td></tr><tr><td>1.740</td><td>74.43	
+</td></tr><tr><td>1.635</td><td>66.44	
+</td></tr><tr><td>1.535</td><td>59.03	
+</td></tr><tr><td>1.430</td><td>51.76	
+</td></tr><tr><td>1.330</td><td>45.06	
+</td></tr><tr><td>1.125</td><td>32.51	
+</td></tr><tr><td>1.025</td><td>27.09	
+</td></tr><tr><td>0.920</td><td>22.53	
+</td></tr><tr><td>0.820</td><td>18.39	
+</td></tr><tr><td>0.715</td><td>14.83	
+</td></tr><tr><td>0.615</td><td>11.83	
+</td></tr><tr><td>0.510</td><td>9.55	
+</td></tr><tr><td>0.000</td><td>9.55	
+</td></tr><tr><td>0.000</td><td>9.55	
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="pcc1">
+Stock - Ford '98 Explorer 5.0L
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1205.4	
+</td></tr><tr><td>5.00</td><td>1205.4	
+</td></tr><tr><td>4.75</td><td>1022.1	
+</td></tr><tr><td>4.50</td><td>876.6	
+</td></tr><tr><td>4.25</td><td>713.0	
+</td></tr><tr><td>4.00</td><td>615.5	
+</td></tr><tr><td>3.80</td><td>538.2	
+</td></tr><tr><td>3.60</td><td>453.3	
+</td></tr><tr><td>3.40</td><td>389.7	
+</td></tr><tr><td>3.20</td><td>329.5	
+</td></tr><tr><td>3.00</td><td>276.8	
+</td></tr><tr><td>2.80</td><td>231.4	
+</td></tr><tr><td>2.60</td><td>190.0	
+</td></tr><tr><td>2.40</td><td>154.3	
+</td></tr><tr><td>2.20</td><td>123.3	
+</td></tr><tr><td>2.10</td><td>112.4	
+</td></tr><tr><td>2.00</td><td>100.3	
+</td></tr><tr><td>1.90</td><td>89.6	
+</td></tr><tr><td>1.80</td><td>79.4	
+</td></tr><tr><td>1.70</td><td>69.8	
+</td></tr><tr><td>1.60</td><td>60.9	
+</td></tr><tr><td>1.50</td><td>53.0	
+</td></tr><tr><td>1.40</td><td>46.6	
+</td></tr><tr><td>1.30</td><td>40.8	
+</td></tr><tr><td>1.00</td><td>25.9	
+</td></tr><tr><td>0.94</td><td>22.3	
+</td></tr><tr><td>0.80</td><td>18.7	
+</td></tr><tr><td>0.60</td><td>11.7	
+</td></tr><tr><td>0.00</td><td>7.6	
+</td></tr><tr><td>0.00</td><td>7.6	
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="5.4">
+Stock - Ford 1999 - 2004 F-150 &amp; F-250 5.4L
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1170.1	
+</td></tr><tr><td>5.00</td><td>1120.6	
+</td></tr><tr><td>4.75</td><td>979.6	
+</td></tr><tr><td>4.50</td><td>843.6	
+</td></tr><tr><td>4.25</td><td>721.1	
+</td></tr><tr><td>4.00</td><td>608.2	
+</td></tr><tr><td>3.75</td><td>510.5	
+</td></tr><tr><td>3.50</td><td>421.7	
+</td></tr><tr><td>3.25</td><td>344.4	
+</td></tr><tr><td>3.00</td><td>273.3	
+</td></tr><tr><td>2.75</td><td>215.9	
+</td></tr><tr><td>2.50</td><td>170.4	
+</td></tr><tr><td>2.25</td><td>125.3	
+</td></tr><tr><td>2.00</td><td>96.7	
+</td></tr><tr><td>1.75</td><td>72.3	
+</td></tr><tr><td>1.50</td><td>52.7	
+</td></tr><tr><td>1.30</td><td>39.3	
+</td></tr><tr><td>1.20</td><td>34.1	
+</td></tr><tr><td>1.10</td><td>29.1	
+</td></tr><tr><td>1.00</td><td>24.6	
+</td></tr><tr><td>0.75</td><td>15.3	
+</td></tr><tr><td>0.50</td><td>5.8	
+</td></tr><tr><td>0.25</td><td>2.8	
+</td></tr><tr><td>0.05</td><td>0.6	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr><tr><td>0.00</td><td>0	
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="slot3">
+OEM Slot 3" - 77mm
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.0</td><td>1029.09
+</td></tr><tr><td>5.00</td><td>1029.09
+</td></tr><tr><td>4.696</td><td>860.52
+</td></tr><tr><td>4.381</td><td>708.18
+</td></tr><tr><td>4.15</td><td>608.61
+</td></tr><tr><td>3.884</td><td>506.01
+</td></tr><tr><td>3.738</td><td>455.06
+</td></tr><tr><td>3.58</td><td>404.08
+</td></tr><tr><td>3.406</td><td>352.79
+</td></tr><tr><td>3.214</td><td>301.84
+</td></tr><tr><td>3.089</td><td>271.71
+</td></tr><tr><td>2.807</td><td>211.94
+</td></tr><tr><td>2.582</td><td>171.76
+</td></tr><tr><td>2.455</td><td>151.77
+</td></tr><tr><td>2.316</td><td>131.94
+</td></tr><tr><td>2.163</td><td>112.40
+</td></tr><tr><td>1.992</td><td>93.16
+</td></tr><tr><td>1.892</td><td>83.07
+</td></tr><tr><td>1.660</td><td>62.63
+</td></tr><tr><td>1.523</td><td>52.30
+</td></tr><tr><td>1.450</td><td>47.29
+</td></tr><tr><td>1.286</td><td>37.18
+</td></tr><tr><td>1.195</td><td>32.24
+</td></tr><tr><td>0.964</td><td>21.76
+</td></tr><tr><td>0.814</td><td>16.52
+</td></tr><tr><td>0.743</td><td>14.46
+</td></tr><tr><td>0.608</td><td>11.24
+</td></tr><tr><td>0.528</td><td>9.72
+</td></tr><tr><td>0.350</td><td>6.98
+</td></tr><tr><td>0.000</td><td>0.00
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="slot31">
+<br>Stock 05+ Mustang
+<br>OEM Slot 3.1" - 79mm
+<table border="1">
+<tbody><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.0</td><td>1083.42
+</td></tr><tr><td>5.00</td><td>1083.42
+</td></tr><tr><td>4.696</td><td>905.40
+</td></tr><tr><td>4.381</td><td>746.71
+</td></tr><tr><td>4.15</td><td>639.78
+</td></tr><tr><td>3.884</td><td>531.79
+</td></tr><tr><td>3.738</td><td>478.88
+</td></tr><tr><td>3.58</td><td>426.52
+</td></tr><tr><td>3.406</td><td>372.28
+</td></tr><tr><td>3.214</td><td>317.85
+</td></tr><tr><td>3.089</td><td>285.21
+</td></tr><tr><td>2.807</td><td>222.89
+</td></tr><tr><td>2.582</td><td>181.71
+</td></tr><tr><td>2.455</td><td>160.54
+</td></tr><tr><td>2.316</td><td>139.07
+</td></tr><tr><td>2.163</td><td>117.78
+</td></tr><tr><td>1.992</td><td>97.54
+</td></tr><tr><td>1.892</td><td>87.03
+</td></tr><tr><td>1.660</td><td>66.46
+</td></tr><tr><td>1.523</td><td>55.52
+</td></tr><tr><td>1.450</td><td>49.99
+</td></tr><tr><td>1.286</td><td>38.89
+</td></tr><tr><td>1.195</td><td>33.69
+</td></tr><tr><td>0.964</td><td>23.05
+</td></tr><tr><td>0.814</td><td>17.44
+</td></tr><tr><td>0.743</td><td>15.32
+</td></tr><tr><td>0.608</td><td>11.86
+</td></tr><tr><td>0.528</td><td>10.01
+</td></tr><tr><td>0.350</td><td>7.34
+</td></tr><tr><td>0.000</td><td>0.00
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="slot35">
+OEM Slot 3 - 1/2" - 90mm
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.0</td><td>1405.90
+</td></tr><tr><td>5.00</td><td>1405.90
+</td></tr><tr><td>4.696</td><td>1175.62
+</td></tr><tr><td>4.381</td><td>967.49
+</td></tr><tr><td>4.15</td><td>831.46
+</td></tr><tr><td>3.884</td><td>691.30
+</td></tr><tr><td>3.738</td><td>621.69
+</td></tr><tr><td>3.58</td><td>552.04
+</td></tr><tr><td>3.406</td><td>481.97
+</td></tr><tr><td>3.214</td><td>412.37
+</td></tr><tr><td>3.089</td><td>371.20
+</td></tr><tr><td>2.807</td><td>289.54
+</td></tr><tr><td>2.582</td><td>234.66
+</td></tr><tr><td>2.455</td><td>207.34
+</td></tr><tr><td>2.316</td><td>180.25
+</td></tr><tr><td>2.163</td><td>153.56
+</td></tr><tr><td>1.992</td><td>127.28
+</td></tr><tr><td>1.892</td><td>113.49
+</td></tr><tr><td>1.660</td><td>85.56
+</td></tr><tr><td>1.523</td><td>71.46
+</td></tr><tr><td>1.450</td><td>64.61
+</td></tr><tr><td>1.286</td><td>50.80
+</td></tr><tr><td>1.195</td><td>44.05
+</td></tr><tr><td>0.964</td><td>29.73
+</td></tr><tr><td>0.814</td><td>22.58
+</td></tr><tr><td>0.743</td><td>19.76
+</td></tr><tr><td>0.608</td><td>15.36
+</td></tr><tr><td>0.528</td><td>13.28
+</td></tr><tr><td>0.350</td><td>9.53
+</td></tr><tr><td>0.000</td><td>0.00
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="slot4">
+OEM Slot 4" - 102mm
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.0</td><td>1805.81
+</td></tr><tr><td>5.00</td><td>1805.81
+</td></tr><tr><td>4.696</td><td>1510.01
+</td></tr><tr><td>4.381</td><td>1242.69
+</td></tr><tr><td>4.15</td><td>1067.96
+</td></tr><tr><td>3.884</td><td>887.94
+</td></tr><tr><td>3.738</td><td>798.52
+</td></tr><tr><td>3.58</td><td>709.07
+</td></tr><tr><td>3.406</td><td>619.07
+</td></tr><tr><td>3.214</td><td>529.67
+</td></tr><tr><td>3.089</td><td>476.79
+</td></tr><tr><td>2.807</td><td>371.91
+</td></tr><tr><td>2.582</td><td>301.41
+</td></tr><tr><td>2.455</td><td>266.32
+</td></tr><tr><td>2.316</td><td>231.52
+</td></tr><tr><td>2.163</td><td>197.24
+</td></tr><tr><td>1.992</td><td>163.48
+</td></tr><tr><td>1.892</td><td>145.78
+</td></tr><tr><td>1.660</td><td>109.90
+</td></tr><tr><td>1.523</td><td>91.78
+</td></tr><tr><td>1.450</td><td>82.99
+</td></tr><tr><td>1.286</td><td>65.25
+</td></tr><tr><td>1.195</td><td>56.58
+</td></tr><tr><td>0.964</td><td>38.19
+</td></tr><tr><td>0.814</td><td>29.00
+</td></tr><tr><td>0.743</td><td>25.38
+</td></tr><tr><td>0.608</td><td>19.73
+</td></tr><tr><td>0.528</td><td>17.06
+</td></tr><tr><td>0.350</td><td>12.25
+</td></tr><tr><td>0.000</td><td>0.00
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="oem80lightning">
+80mm Lightning	
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1552.3	
+</td></tr><tr><td>5.000</td><td>1552.3	
+</td></tr><tr><td>4.643</td><td>1244.3	
+</td></tr><tr><td>4.447</td><td>1097.4	
+</td></tr><tr><td>4.252</td><td>964.28	
+</td></tr><tr><td>4.056</td><td>843.58	
+</td></tr><tr><td>3.861</td><td>734.00	
+</td></tr><tr><td>3.665</td><td>634.61	
+</td></tr><tr><td>3.470</td><td>544.47	
+</td></tr><tr><td>3.274</td><td>463.37	
+</td></tr><tr><td>3.079</td><td>391.14	
+</td></tr><tr><td>2.883</td><td>327.21	
+</td></tr><tr><td>2.737</td><td>284.21	
+</td></tr><tr><td>2.590</td><td>245.36	
+</td></tr><tr><td>2.443</td><td>210.66	
+</td></tr><tr><td>2.297</td><td>179.54	
+</td></tr><tr><td>2.150</td><td>151.82	
+</td></tr><tr><td>2.003</td><td>127.49	
+</td></tr><tr><td>1.857</td><td>106.18	
+</td></tr><tr><td>1.710</td><td>87.50	
+</td></tr><tr><td>1.564</td><td>71.28	
+</td></tr><tr><td>1.417</td><td>57.52	
+</td></tr><tr><td>1.270</td><td>45.45	
+</td></tr><tr><td>1.124</td><td>35.26	
+</td></tr><tr><td>0.977</td><td>26.59	
+</td></tr><tr><td>0.855</td><td>20.55	
+</td></tr><tr><td>0.733</td><td>15.27	
+</td></tr><tr><td>0.635</td><td>11.88	
+</td></tr><tr><td>0.562</td><td>9.80	
+</td></tr><tr><td>0.000</td><td>4.149	
+</td></tr></tbody></table></div>
+
+
+<div style="display: block;" id="90ford">
+90mm Ford Lightning / 03-04 Cobra	
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>1686.63	
+</td></tr><tr><td>5.000</td><td>1686.63	
+</td></tr><tr><td>4.839</td><td>1485.72
+</td></tr><tr><td>4.679</td><td>1342.28	
+</td></tr><tr><td>4.518</td><td>1220.06	
+</td></tr><tr><td>4.358</td><td>1104.82	
+</td></tr><tr><td>4.198</td><td>993.50	
+</td></tr><tr><td>4.037</td><td>887.583	
+</td></tr><tr><td>3.877</td><td>789.320	
+</td></tr><tr><td>3.717</td><td>700.066	
+</td></tr><tr><td>3.556</td><td>619.84	
+</td></tr><tr><td>3.396</td><td>547.64	
+</td></tr><tr><td>3.236</td><td>481.96	
+</td></tr><tr><td>3.075</td><td>421.43	
+</td></tr><tr><td>2.915</td><td>365.14	
+</td></tr><tr><td>2.755</td><td>312.87	
+</td></tr><tr><td>2.594</td><td>264.95	
+</td></tr><tr><td>2.434</td><td>222.05	
+</td></tr><tr><td>2.274</td><td>184.78	
+</td></tr><tr><td>2.113</td><td>153.36	
+</td></tr><tr><td>1.953</td><td>127.42	
+</td></tr><tr><td>1.793</td><td>106.00	
+</td></tr><tr><td>1.632</td><td>87.71	
+</td></tr><tr><td>1.472</td><td>71.25	
+</td></tr><tr><td>1.312</td><td>55.85	
+</td></tr><tr><td>1.151</td><td>41.76	
+</td></tr><tr><td>0.991</td><td>30.16	
+</td></tr><tr><td>0.831</td><td>22.19	
+</td></tr><tr><td>0.670</td><td>16.37	
+</td></tr><tr><td>0.000</td><td>5.50	
+</td></tr></tbody></table></div>
+
+
+<div style="display: block;" id="90ford.25">
+90mm Ford Lightning / 03-04 Cobra	 - PMAS
+<br>SIMPLIFIED to 1/4 voltages
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.0</td><td>1686.5	
+</td></tr><tr><td>5.00</td><td>1686.5	
+</td></tr><tr><td>4.75</td><td>1405.8
+</td></tr><tr><td>4.50</td><td>1207.1	
+</td></tr><tr><td>4.25</td><td>1029.7	
+</td></tr><tr><td>4.00</td><td>864.9	
+</td></tr><tr><td>3.75</td><td>718.6	
+</td></tr><tr><td>3.50</td><td>594.7	
+</td></tr><tr><td>3.25</td><td>487.6	
+</td></tr><tr><td>3.00</td><td>395.1	
+</td></tr><tr><td>2.75</td><td>311.4	
+</td></tr><tr><td>2.50</td><td>239.8	
+</td></tr><tr><td>2.25</td><td>180.0	
+</td></tr><tr><td>2.00</td><td>135.0	
+</td></tr><tr><td>1.75</td><td>101.1	
+</td></tr><tr><td>1.50</td><td>74.1	
+</td></tr><tr><td>1.25</td><td>50.4	
+</td></tr><tr><td>1.00</td><td>30.7	
+</td></tr><tr><td>0.75</td><td>19.3	
+</td></tr><tr><td>0.50</td><td>13.6	
+</td></tr><tr><td>0.25</td><td>9.5	
+</td></tr><tr><td>0.05</td><td>6.3	
+</td></tr><tr><td>0.00</td><td>0.0	
+</td></tr><tr><td>0.00</td><td>0.0	
+</td></tr><tr><td>0.00</td><td>0.0	
+</td></tr><tr><td>0.00</td><td>0.0	
+</td></tr><tr><td>0.00</td><td>0.0	
+</td></tr><tr><td>0.00</td><td>0.0	
+</td></tr><tr><td>0.00</td><td>0.0	
+</td></tr><tr><td>0.00</td><td>0.0	
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="hpx4">
+HPX High Flow Slot 4" - PMAS
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.0</td><td>4710.97
+</td></tr><tr><td>5.00</td><td>4710.97
+</td></tr><tr><td>4.70</td><td>3958.03
+</td></tr><tr><td>4.38</td><td>3200.53
+</td></tr><tr><td>4.15</td><td>2723.72
+</td></tr><tr><td>3.88</td><td>2236.87
+</td></tr><tr><td>3.74</td><td>2011.80
+</td></tr><tr><td>3.58</td><td>1774.55
+</td></tr><tr><td>3.41</td><td>1543.61
+</td></tr><tr><td>3.21</td><td>1297.64
+</td></tr><tr><td>3.00</td><td>1067.86
+</td></tr><tr><td>2.81</td><td>884.58
+</td></tr><tr><td>2.58</td><td>693.52
+</td></tr><tr><td>2.45</td><td>600.01
+</td></tr><tr><td>2.32</td><td>516.45
+</td></tr><tr><td>2.16</td><td>426.37
+</td></tr><tr><td>1.99</td><td>344.59
+</td></tr><tr><td>1.89</td><td>302.45
+</td></tr><tr><td>1.66</td><td>219.78
+</td></tr><tr><td>1.52</td><td>177.81
+</td></tr><tr><td>1.45</td><td>158.89
+</td></tr><tr><td>1.29</td><td>120.51
+</td></tr><tr><td>1.20</td><td>101.79
+</td></tr><tr><td>0.96</td><td>62.03
+</td></tr><tr><td>0.81</td><td>44.64
+</td></tr><tr><td>0.74</td><td>38.30
+</td></tr><tr><td>0.61</td><td>28.70
+</td></tr><tr><td>0.53</td><td>23.35
+</td></tr><tr><td>0.35</td><td>7.25
+</td></tr><tr><td>0.00</td><td>0.00
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="sim_hpx4">
+HPX 4" Slot - SIMPLIFIED
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.00</td><td>4710.97
+</td></tr><tr><td>5.00</td><td>4710.97
+</td></tr><tr><td>4.50</td><td>3484.59
+</td></tr><tr><td>4.00</td><td>2453.24
+</td></tr><tr><td>3.50</td><td>1665.87
+</td></tr><tr><td>3.00</td><td>1067.86
+</td></tr><tr><td>2.50</td><td>635.97
+</td></tr><tr><td>2.25</td><td>477.04
+</td></tr><tr><td>2.00</td><td>349.4
+</td></tr><tr><td>1.75</td><td>242.12
+</td></tr><tr><td>1.50</td><td>172.4
+</td></tr><tr><td>1.25</td><td>112.19
+</td></tr><tr><td>1.00</td><td>68.65
+</td></tr><tr><td>0.75</td><td>39.2
+</td></tr><tr><td>0.50</td><td>20.66
+</td></tr><tr><td>0.25</td><td>5.17
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="hpx375">
+HPX High Flow Slot 3.75" - PMAS
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.0</td><td>4140.50
+</td></tr><tr><td>5.00</td><td>4140.50
+</td></tr><tr><td>4.70</td><td>3478.73
+</td></tr><tr><td>4.38</td><td>2812.97
+</td></tr><tr><td>4.15</td><td>2393.90
+</td></tr><tr><td>3.88</td><td>1966.00
+</td></tr><tr><td>3.74</td><td>1768.18
+</td></tr><tr><td>3.58</td><td>1559.66
+</td></tr><tr><td>3.41</td><td>1356.69
+</td></tr><tr><td>3.21</td><td>1140.50
+</td></tr><tr><td>3.00</td><td>938.54
+</td></tr><tr><td>2.81</td><td>777.46
+</td></tr><tr><td>2.58</td><td>609.54
+</td></tr><tr><td>2.45</td><td>527.35
+</td></tr><tr><td>2.32</td><td>453.91
+</td></tr><tr><td>2.16</td><td>374.73
+</td></tr><tr><td>1.99</td><td>302.86
+</td></tr><tr><td>1.89</td><td>265.82
+</td></tr><tr><td>1.66</td><td>193.17
+</td></tr><tr><td>1.52</td><td>156.27
+</td></tr><tr><td>1.45</td><td>139.65
+</td></tr><tr><td>1.29</td><td>105.91
+</td></tr><tr><td>1.20</td><td>89.46
+</td></tr><tr><td>0.96</td><td>54.52
+</td></tr><tr><td>0.81</td><td>39.23
+</td></tr><tr><td>0.74</td><td>33.66
+</td></tr><tr><td>0.61</td><td>25.23
+</td></tr><tr><td>0.53</td><td>20.55
+</td></tr><tr><td>0.35</td><td>6.37
+</td></tr><tr><td>0.00</td><td>0.00
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="hpx35">
+HPX High Flow Slot 3.5" - PMAS
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.0</td><td>3606.84
+</td></tr><tr><td>5.00</td><td>3606.84
+</td></tr><tr><td>4.70</td><td>3030.36
+</td></tr><tr><td>4.38</td><td>2450.41
+</td></tr><tr><td>4.15</td><td>2085.35
+</td></tr><tr><td>3.88</td><td>1712.61
+</td></tr><tr><td>3.74</td><td>1540.28
+</td></tr><tr><td>3.58</td><td>1358.64
+</td></tr><tr><td>3.41</td><td>1181.83
+</td></tr><tr><td>3.21</td><td>993.50
+</td></tr><tr><td>3.00</td><td>817.58
+</td></tr><tr><td>2.81</td><td>677.26
+</td></tr><tr><td>2.58</td><td>530.97
+</td></tr><tr><td>2.45</td><td>459.38
+</td></tr><tr><td>2.32</td><td>395.41
+</td></tr><tr><td>2.16</td><td>326.44
+</td></tr><tr><td>1.99</td><td>263.83
+</td></tr><tr><td>1.89</td><td>231.56
+</td></tr><tr><td>1.66</td><td>168.27
+</td></tr><tr><td>1.52</td><td>136.13
+</td></tr><tr><td>1.45</td><td>121.65
+</td></tr><tr><td>1.29</td><td>92.26
+</td></tr><tr><td>1.20</td><td>77.93
+</td></tr><tr><td>0.96</td><td>47.49
+</td></tr><tr><td>0.81</td><td>34.17
+</td></tr><tr><td>0.74</td><td>29.32
+</td></tr><tr><td>0.61</td><td>21.97
+</td></tr><tr><td>0.53</td><td>17.90
+</td></tr><tr><td>0.35</td><td>5.55
+</td></tr><tr><td>0.00</td><td>0.00
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="hpx325">
+HPX High Flow Slot 3.25" - PMAS
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.0</td><td>3109.98
+</td></tr><tr><td>5.00</td><td>3109.98
+</td></tr><tr><td>4.70</td><td>2612.91
+</td></tr><tr><td>4.38</td><td>2112.85
+</td></tr><tr><td>4.15</td><td>1798.08
+</td></tr><tr><td>3.88</td><td>1476.68
+</td></tr><tr><td>3.74</td><td>1328.10
+</td></tr><tr><td>3.58</td><td>1171.48
+</td></tr><tr><td>3.41</td><td>1019.02
+</td></tr><tr><td>3.21</td><td>856.64
+</td></tr><tr><td>3.00</td><td>704.95
+</td></tr><tr><td>2.81</td><td>583.96
+</td></tr><tr><td>2.58</td><td>457.83
+</td></tr><tr><td>2.45</td><td>396.10
+</td></tr><tr><td>2.32</td><td>340.94
+</td></tr><tr><td>2.16</td><td>281.47
+</td></tr><tr><td>1.99</td><td>227.48
+</td></tr><tr><td>1.89</td><td>199.66
+</td></tr><tr><td>1.66</td><td>145.09
+</td></tr><tr><td>1.52</td><td>117.38
+</td></tr><tr><td>1.45</td><td>104.89
+</td></tr><tr><td>1.29</td><td>79.55
+</td></tr><tr><td>1.20</td><td>67.20
+</td></tr><tr><td>0.96</td><td>40.95
+</td></tr><tr><td>0.81</td><td>29.46
+</td></tr><tr><td>0.74</td><td>25.28
+</td></tr><tr><td>0.61</td><td>18.95
+</td></tr><tr><td>0.53</td><td>15.43
+</td></tr><tr><td>0.35</td><td>4.78
+</td></tr><tr><td>0.00</td><td>0.00
+</td></tr></tbody></table></div>
+
+<div style="display: none;" id="hpx3">
+HPX High Flow Slot 3" - PMAS
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.0</td><td>2649.92
+</td></tr><tr><td>5.00</td><td>2649.92
+</td></tr><tr><td>4.70</td><td>2226.39
+</td></tr><tr><td>4.38</td><td>1800.30
+</td></tr><tr><td>4.15</td><td>1532.09
+</td></tr><tr><td>3.88</td><td>1258.24
+</td></tr><tr><td>3.74</td><td>1131.64
+</td></tr><tr><td>3.58</td><td>998.18
+</td></tr><tr><td>3.41</td><td>868.28
+</td></tr><tr><td>3.21</td><td>729.92
+</td></tr><tr><td>3.00</td><td>600.67
+</td></tr><tr><td>2.81</td><td>497.58
+</td></tr><tr><td>2.58</td><td>390.10
+</td></tr><tr><td>2.45</td><td>337.50
+</td></tr><tr><td>2.32</td><td>290.50
+</td></tr><tr><td>2.16</td><td>239.83
+</td></tr><tr><td>1.99</td><td>193.83
+</td></tr><tr><td>1.89</td><td>170.12
+</td></tr><tr><td>1.66</td><td>123.63
+</td></tr><tr><td>1.52</td><td>100.01
+</td></tr><tr><td>1.45</td><td>89.38
+</td></tr><tr><td>1.29</td><td>67.78
+</td></tr><tr><td>1.20</td><td>57.26
+</td></tr><tr><td>0.96</td><td>34.89
+</td></tr><tr><td>0.81</td><td>25.11
+</td></tr><tr><td>0.74</td><td>21.54
+</td></tr><tr><td>0.61</td><td>16.14
+</td></tr><tr><td>0.53</td><td>13.15
+</td></tr><tr><td>0.35</td><td>4.07
+</td></tr><tr><td>0.00</td><td>0.00
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="hpx25">
+HPX High Flow Slot 2.5" - PMAS
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.0</td><td>1840.22
+</td></tr><tr><td>5.00</td><td>1840.22
+</td></tr><tr><td>4.70</td><td>1546.10
+</td></tr><tr><td>4.38</td><td>1250.21
+</td></tr><tr><td>4.15</td><td>1063.95
+</td></tr><tr><td>3.88</td><td>873.78
+</td></tr><tr><td>3.74</td><td>785.86
+</td></tr><tr><td>3.58</td><td>693.18
+</td></tr><tr><td>3.41</td><td>602.97
+</td></tr><tr><td>3.21</td><td>506.89
+</td></tr><tr><td>3.00</td><td>417.13
+</td></tr><tr><td>2.81</td><td>345.54
+</td></tr><tr><td>2.58</td><td>270.90
+</td></tr><tr><td>2.45</td><td>234.38
+</td></tr><tr><td>2.32</td><td>201.74
+</td></tr><tr><td>2.16</td><td>166.55
+</td></tr><tr><td>1.99</td><td>134.60
+</td></tr><tr><td>1.89</td><td>118.14
+</td></tr><tr><td>1.66</td><td>85.85
+</td></tr><tr><td>1.52</td><td>69.45
+</td></tr><tr><td>1.45</td><td>62.07
+</td></tr><tr><td>1.29</td><td>47.07
+</td></tr><tr><td>1.20</td><td>39.76
+</td></tr><tr><td>0.96</td><td>24.23
+</td></tr><tr><td>0.81</td><td>17.43
+</td></tr><tr><td>0.74</td><td>14.96
+</td></tr><tr><td>0.61</td><td>11.21
+</td></tr><tr><td>0.53</td><td>9.13
+</td></tr><tr><td>0.35</td><td>2.83
+</td></tr><tr><td>0.00</td><td>0.00
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="fox30">
+30lb Calibrated Foxbody MAF
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.0</td><td>1542.65
+</td></tr><tr><td>5.0</td><td>1542.65
+</td></tr><tr><td>4.8</td><td>1381.95
+</td></tr><tr><td>4.6</td><td>1233.93
+</td></tr><tr><td>4.4</td><td>1097.32
+</td></tr><tr><td>4.2</td><td>971.49
+</td></tr><tr><td>4.1</td><td>912.85
+</td></tr><tr><td>3.9</td><td>802.54
+</td></tr><tr><td>3.7</td><td>702.38
+</td></tr><tr><td>3.5</td><td>611.10
+</td></tr><tr><td>3.3</td><td>528.69
+</td></tr><tr><td>3.2</td><td>490.65
+</td></tr><tr><td>3.0</td><td>419.97
+</td></tr><tr><td>2.8</td><td>357.21
+</td></tr><tr><td>2.6</td><td>301.11
+</td></tr><tr><td>2.5</td><td>275.75
+</td></tr><tr><td>2.3</td><td>229.16
+</td></tr><tr><td>2.1</td><td>188.59
+</td></tr><tr><td>1.9</td><td>153.41
+</td></tr><tr><td>1.7</td><td>122.98
+</td></tr><tr><td>1.6</td><td>109.66
+</td></tr><tr><td>1.4</td><td>85.89
+</td></tr><tr><td>1.2</td><td>65.92
+</td></tr><tr><td>1.0</td><td>49.44
+</td></tr><tr><td>0.8</td><td>36.13
+</td></tr><tr><td>0.7</td><td>30.74
+</td></tr><tr><td>0.5</td><td>21.23
+</td></tr><tr><td>0.3</td><td>14.26
+</td></tr><tr><td>0.1</td><td>9.19
+</td></tr><tr><td>0.0</td><td>7.29
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="sim_fox30">
+30lb Calibrated 88-95 GT MAF - SIMPLIFIED
+<br>Flowed by PMAS test bench
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.00</td><td>1542.6
+</td></tr><tr><td>5.00</td><td>1542.6
+</td></tr><tr><td>4.75</td><td>1335
+</td></tr><tr><td>4.50</td><td>1150
+</td></tr><tr><td>4.25</td><td>985
+</td></tr><tr><td>4.00</td><td>827.5
+</td></tr><tr><td>3.75</td><td>686
+</td></tr><tr><td>3.50</td><td>574
+</td></tr><tr><td>3.25</td><td>479
+</td></tr><tr><td>3.00</td><td>397
+</td></tr><tr><td>2.75</td><td>322
+</td></tr><tr><td>2.50</td><td>259
+</td></tr><tr><td>2.25</td><td>207
+</td></tr><tr><td>2.00</td><td>162
+</td></tr><tr><td>1.75</td><td>122.6
+</td></tr><tr><td>1.50</td><td>91
+</td></tr><tr><td>1.25</td><td>66.11
+</td></tr><tr><td>1.00</td><td>46.22
+</td></tr><tr><td>0.75</td><td>31.22
+</td></tr><tr><td>0.50</td><td>21.23
+</td></tr><tr><td>0.25</td><td>12.75
+</td></tr><tr><td>0.05</td><td>7.50
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="sim_fox36">
+36lb Calibrated Foxbody MAF - SIMPLIFIED<br>89-93 5.0L Mustang<br>NOT EXACT
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.00</td><td>1851.4
+</td></tr><tr><td>5.00</td><td>1851.4
+</td></tr><tr><td>4.75</td><td>1611.5
+</td></tr><tr><td>4.50</td><td>1400
+</td></tr><tr><td>4.25</td><td>1200
+</td></tr><tr><td>4.00</td><td>1028
+</td></tr><tr><td>3.75</td><td>870
+</td></tr><tr><td>3.50</td><td>733.5
+</td></tr><tr><td>3.25</td><td>610.2
+</td></tr><tr><td>3.00</td><td>504.3
+</td></tr><tr><td>2.75</td><td>410
+</td></tr><tr><td>2.50</td><td>330.9
+</td></tr><tr><td>2.25</td><td>262.8
+</td></tr><tr><td>2.00</td><td>205
+</td></tr><tr><td>1.75</td><td>156.5
+</td></tr><tr><td>1.50</td><td>116.9
+</td></tr><tr><td>1.25</td><td>85
+</td></tr><tr><td>1.00</td><td>59.6
+</td></tr><tr><td>0.75</td><td>40
+</td></tr><tr><td>0.50</td><td>25.7
+</td></tr><tr><td>0.25</td><td>15
+</td></tr><tr><td>0.05</td><td>8
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="sim_fox42">
+42lb Calibrated Foxbody MAF - SIMPLIFIED
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.00</td><td>2160.2
+</td></tr><tr><td>5.00</td><td>2160.2
+</td></tr><tr><td>4.50</td><td>1627.6
+</td></tr><tr><td>4.00</td><td>1200.2
+</td></tr><tr><td>3.50</td><td>855.4
+</td></tr><tr><td>3.00</td><td>588.4
+</td></tr><tr><td>2.50</td><td>386.2
+</td></tr><tr><td>2.00</td><td>239.5
+</td></tr><tr><td>1.75</td><td>187.9
+</td></tr><tr><td>1.50</td><td>135.9
+</td></tr><tr><td>1.25</td><td>98.9
+</td></tr><tr><td>1.00</td><td>69.4
+</td></tr><tr><td>0.75</td><td>46.9
+</td></tr><tr><td>0.50</td><td>29.8
+</td></tr><tr><td>0.25</td><td>17.1
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="fox60">
+60lb Calibrated Foxbody MAF
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.0</td><td>3188.64
+</td></tr><tr><td>5.0</td><td>3188.64
+</td></tr><tr><td>4.8</td><td>2857.10
+</td></tr><tr><td>4.6</td><td>2550.59
+</td></tr><tr><td>4.4</td><td>2267.86
+</td></tr><tr><td>4.2</td><td>2008.27
+</td></tr><tr><td>4.1</td><td>1886.56
+</td></tr><tr><td>3.9</td><td>1658.98
+</td></tr><tr><td>3.7</td><td>1451.68
+</td></tr><tr><td>3.5</td><td>1263.09
+</td></tr><tr><td>3.3</td><td>1092.88
+</td></tr><tr><td>3.2</td><td>1013.96
+</td></tr><tr><td>3.0</td><td>868.47
+</td></tr><tr><td>2.8</td><td>738.52
+</td></tr><tr><td>2.6</td><td>622.83
+</td></tr><tr><td>2.5</td><td>569.89
+</td></tr><tr><td>2.3</td><td>474.17
+</td></tr><tr><td>2.1</td><td>390.18
+</td></tr><tr><td>1.9</td><td>317.27
+</td></tr><tr><td>1.7</td><td>254.52
+</td></tr><tr><td>1.6</td><td>226.62
+</td></tr><tr><td>1.4</td><td>177.49
+</td></tr><tr><td>1.2</td><td>136.61
+</td></tr><tr><td>1.0</td><td>102.69
+</td></tr><tr><td>0.8</td><td>75.12
+</td></tr><tr><td>0.7</td><td>63.70
+</td></tr><tr><td>0.5</td><td>44.37
+</td></tr><tr><td>0.3</td><td>29.47
+</td></tr><tr><td>0.1</td><td>18.38
+</td></tr><tr><td>0.0</td><td>13.94
+</td></tr></tbody></table></div>
+
+<div style="display: none;" id="sim_sct24">
+SCT BA2400 - PMAS (simplified)
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.00</td><td>2956.20
+</td></tr><tr><td>5.00</td><td>2956.20
+</td></tr><tr><td>4.75</td><td>2542.17
+</td></tr><tr><td>4.50</td><td>2189.87
+</td></tr><tr><td>4.25</td><td>1870.57
+</td></tr><tr><td>4.00</td><td>1569.97
+</td></tr><tr><td>3.75</td><td>1299.27
+</td></tr><tr><td>3.50</td><td>1058.44
+</td></tr><tr><td>3.25</td><td>853.71
+</td></tr><tr><td>3.00</td><td>678.79
+</td></tr><tr><td>2.75</td><td>533.47
+</td></tr><tr><td>2.50</td><td>411.35
+</td></tr><tr><td>2.25</td><td>311.05
+</td></tr><tr><td>2.00</td><td>229.51
+</td></tr><tr><td>1.75</td><td>164.53
+</td></tr><tr><td>1.50</td><td>113.85
+</td></tr><tr><td>1.25</td><td>74.6
+</td></tr><tr><td>1.00</td><td>45.19
+</td></tr><tr><td>0.75</td><td>24.88
+</td></tr><tr><td>0.50</td><td>14.47
+</td></tr><tr><td>0.25</td><td>9.73
+</td></tr><tr><td>0.05</td><td>6.39
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr></tbody></table></div>
+
+
+
+
+<div style="display: none;" id="sct24">
+SCT BA2400 - PMAS
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>2956.20	
+</td></tr><tr><td>5.000</td><td>2956.20	
+</td></tr><tr><td>4.831</td><td>2662.37
+</td></tr><tr><td>4.662</td><td>2411.58	
+</td></tr><tr><td>4.494</td><td>2181.66	
+</td></tr><tr><td>4.325</td><td>1963.32	
+</td></tr><tr><td>4.156</td><td>1754.33	
+</td></tr><tr><td>3.988</td><td>1555.79	
+</td></tr><tr><td>3.819</td><td>1369.78	
+</td></tr><tr><td>3.651</td><td>1198.11	
+</td></tr><tr><td>3.482</td><td>1041.79	
+</td></tr><tr><td>3.313</td><td>900.95	
+</td></tr><tr><td>3.145</td><td>774.99	
+</td></tr><tr><td>2.976</td><td>662.87	
+</td></tr><tr><td>2.807</td><td>563.36	
+</td></tr><tr><td>2.639</td><td>475.27	
+</td></tr><tr><td>2.470</td><td>397.55	
+</td></tr><tr><td>2.302</td><td>329.34	
+</td></tr><tr><td>2.133</td><td>269.91	
+</td></tr><tr><td>1.964</td><td>218.58	
+</td></tr><tr><td>1.796</td><td>174.67	
+</td></tr><tr><td>1.627</td><td>137.44	
+</td></tr><tr><td>1.458</td><td>106.06	
+</td></tr><tr><td>1.290</td><td>79.77	
+</td></tr><tr><td>1.121</td><td>57.94	
+</td></tr><tr><td>0.953</td><td>40.24	
+</td></tr><tr><td>0.784</td><td>26.71	
+</td></tr><tr><td>0.615</td><td>17.64	
+</td></tr><tr><td>0.447</td><td>13.02	
+</td></tr><tr><td>0.000</td><td>5.56	
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="fox24">
+24lb Calibrated Foxbody MAF
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.0</td><td>1233.93
+</td></tr><tr><td>5.0</td><td>1233.93
+</td></tr><tr><td>4.8</td><td>1105.56
+</td></tr><tr><td>4.6</td><td>987.02
+</td></tr><tr><td>4.4</td><td>877.66
+</td></tr><tr><td>4.2</td><td>777.19
+</td></tr><tr><td>4.1</td><td>729.96
+</td></tr><tr><td>3.9</td><td>642.16
+</td></tr><tr><td>3.7</td><td>561.65
+</td></tr><tr><td>3.5</td><td>488.75
+</td></tr><tr><td>3.3</td><td>422.82
+</td></tr><tr><td>3.2</td><td>392.40
+</td></tr><tr><td>3.0</td><td>335.98
+</td></tr><tr><td>2.8</td><td>285.58
+</td></tr><tr><td>2.6</td><td>240.89
+</td></tr><tr><td>2.5</td><td>220.28
+</td></tr><tr><td>2.3</td><td>183.20
+</td></tr><tr><td>2.1</td><td>150.87
+</td></tr><tr><td>1.9</td><td>122.66
+</td></tr><tr><td>1.7</td><td>98.25
+</td></tr><tr><td>1.6</td><td>87.48
+</td></tr><tr><td>1.4</td><td>68.78
+</td></tr><tr><td>1.2</td><td>52.61
+</td></tr><tr><td>1.0</td><td>39.62
+</td></tr><tr><td>0.8</td><td>28.84
+</td></tr><tr><td>0.7</td><td>24.40
+</td></tr><tr><td>0.5</td><td>16.79
+</td></tr><tr><td>0.3</td><td>11.09
+</td></tr><tr><td>0.1</td><td>6.65
+</td></tr><tr><td>0.0</td><td>5.07
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="sim_fox24">
+SIMPLIFIED - 24lb Calibrated Foxbody MAF
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.00</td><td>1234.1
+</td></tr><tr><td>5.00</td><td>1234.1
+</td></tr><tr><td>4.75</td><td>1075.0
+</td></tr><tr><td>4.50</td><td>932.4
+</td></tr><tr><td>4.25</td><td>801.9
+</td></tr><tr><td>4.00</td><td>685.9
+</td></tr><tr><td>3.75</td><td>580.5
+</td></tr><tr><td>3.50</td><td>488.9
+</td></tr><tr><td>3.25</td><td>406.9
+</td></tr><tr><td>3.00</td><td>335.8
+</td></tr><tr><td>2.75</td><td>274.0
+</td></tr><tr><td>2.50</td><td>220.2
+</td></tr><tr><td>2.25</td><td>175.2
+</td></tr><tr><td>2.00</td><td>136.9
+</td></tr><tr><td>1.75</td><td>104.2
+</td></tr><tr><td>1.50</td><td>78.3
+</td></tr><tr><td>1.25</td><td>56.7
+</td></tr><tr><td>1.00</td><td>39.6
+</td></tr><tr><td>0.75</td><td>26.6
+</td></tr><tr><td>0.50</td><td>16.8
+</td></tr><tr><td>0.25</td><td>10.1
+</td></tr><tr><td>0.05</td><td>3.0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr><tr><td>0</td><td>0
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="abaco85dbx">
+Abaco DBX 85mm UNSCALED
+<table border="1">
+<tbody><tr></tr><tr><td>Voltage</td><td>Flow
+</td></tr><tr><td>16.0</td><td>3780
+</td></tr><tr><td>5.0</td><td>3780
+</td></tr><tr><td>4.8</td><td>3440
+</td></tr><tr><td>4.6</td><td>2950
+</td></tr><tr><td>4.4</td><td>2520
+</td></tr><tr><td>4.2</td><td>2145
+</td></tr><tr><td>4.0</td><td>1850
+</td></tr><tr><td>3.8</td><td>1590
+</td></tr><tr><td>3.6</td><td>1345
+</td></tr><tr><td>3.4</td><td>1150
+</td></tr><tr><td>3.2</td><td>965
+</td></tr><tr><td>3.0</td><td>806
+</td></tr><tr><td>2.8</td><td>668
+</td></tr><tr><td>2.6</td><td>546
+</td></tr><tr><td>2.4</td><td>438
+</td></tr><tr><td>2.2</td><td>348
+</td></tr><tr><td>2.0</td><td>275
+</td></tr><tr><td>1.8</td><td>210
+</td></tr><tr><td>1.6</td><td>154
+</td></tr><tr><td>1.4</td><td>109
+</td></tr><tr><td>1.2</td><td>74.59
+</td></tr><tr><td>1.0</td><td>46.83
+</td></tr><tr><td>0.8</td><td>27
+</td></tr><tr><td>0.6</td><td>15.15
+</td></tr><tr><td>0.5</td><td>11.3
+</td></tr><tr><td>0.4</td><td>8.45
+</td></tr><tr><td>0.3</td><td>6.2
+</td></tr><tr><td>0.2</td><td>5.2
+</td></tr><tr><td>0.1</td><td>3.15
+</td></tr><tr><td>0.0</td><td>0
+</td></tr></tbody></table></div>
+
+
+<div style="display: none;" id="3000">
+<br>SCT BA2800
+<br>SCT BA3000
+<table border="1">
+<tbody><tr><td>Voltage</td><td>Flow 	
+</td></tr><tr><td>16.00</td><td>3449.01	
+</td></tr><tr><td>5.000</td><td>3449.01	
+</td></tr><tr><td>4.831</td><td>3106.12
+</td></tr><tr><td>4.662</td><td>2813.50	
+</td></tr><tr><td>4.494</td><td>2545.27	
+</td></tr><tr><td>4.325</td><td>2290.55	
+</td></tr><tr><td>4.156</td><td>2046.74	
+</td></tr><tr><td>3.988</td><td>1815.12	
+</td></tr><tr><td>3.819</td><td>1598.11	
+</td></tr><tr><td>3.651</td><td>1397.83	
+</td></tr><tr><td>3.482</td><td>1215.46	
+</td></tr><tr><td>3.313</td><td>1051.14	
+</td></tr><tr><td>3.145</td><td>904.18	
+</td></tr><tr><td>2.976</td><td>773.37	
+</td></tr><tr><td>2.807</td><td>657.26	
+</td></tr><tr><td>2.639</td><td>554.48	
+</td></tr><tr><td>2.470</td><td>463.81	
+</td></tr><tr><td>2.302</td><td>384.22	
+</td></tr><tr><td>2.133</td><td>314.88	
+</td></tr><tr><td>1.964</td><td>255.00	
+</td></tr><tr><td>1.796</td><td>203.78	
+</td></tr><tr><td>1.627</td><td>160.36	
+</td></tr><tr><td>1.458</td><td>123.78	
+</td></tr><tr><td>1.290</td><td>93.13	
+</td></tr><tr><td>1.121</td><td>67.68	
+</td></tr><tr><td>0.953</td><td>47.05	
+</td></tr><tr><td>0.784</td><td>31.27	
+</td></tr><tr><td>0.615</td><td>20.65	
+</td></tr><tr><td>0.447</td><td>15.22	
+</td></tr><tr><td>0.000</td><td>5.00	
+</td></tr></tbody></table></div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br>
+<br>
+<br><a href="http://www.efidynotuning.com/" target="_top">Return Home</a>
+<br><a href="http://forum.efidynotuning.com/" target="_top">Jump to Forum</a>
+<center>www.EFIDynoTuning.com - EFIDynoTuning LC - New Orleans, LA</center>
+<p></p>
+</font>
+
+</body></html>
