@@ -1,3 +1,7 @@
 Edit Log for A9L2.bin created by TunerPro.
 **************************************************************************
 06/09/2017 21:49:20  Function:  MAF Transfer - kg/hr - FN036 changed.
+06/18/2017 14:22:06  Scalar:    Injector Low Slope - ALOSL - [lbs/hr] changed from 26.100 lb/hr (0x3B64) to 63.188 lb/hr (0x8FC9).
+06/18/2017 14:22:45  Scalar:    Injector High Slope - AHISL - [lbs/hr] changed from 19.201 lb/hr (0x2BB1) to 60.268 lb/hr (0x8924).
+06/18/2017 14:29:47  Scalar:    Injector Low Slope - ALOSL - [lbs/hr] changed from 26.100 lb/hr (0x3B64) to 63.188 lb/hr (0x8FC9).
+06/18/2017 14:30:26  Scalar:    Injector High Slope - AHISL - [lbs/hr] changed from 19.201 lb/hr (0x2BB1) to 60.268 lb/hr (0x8924).
