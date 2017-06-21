@@ -5,3 +5,14 @@ Edit Log for A9L2.bin created by TunerPro.
 06/18/2017 14:22:45  Scalar:    Injector High Slope - AHISL - [lbs/hr] changed from 19.201 lb/hr (0x2BB1) to 60.268 lb/hr (0x8924).
 06/18/2017 14:29:47  Scalar:    Injector Low Slope - ALOSL - [lbs/hr] changed from 26.100 lb/hr (0x3B64) to 63.188 lb/hr (0x8FC9).
 06/18/2017 14:30:26  Scalar:    Injector High Slope - AHISL - [lbs/hr] changed from 19.201 lb/hr (0x2BB1) to 60.268 lb/hr (0x8924).
+06/20/2017 21:59:43  Function:  Injector Breakpoint - FN389 / FUEL_BKPT (lbs/rev) changed.
+06/20/2017 22:17:31  Function:  Injector Breakpoint - FN389 / FUEL_BKPT (lbs/rev) changed.
+06/20/2017 22:22:18  Function:  Injector Breakpoint - FN389 / FUEL_BKPT (lbs/rev) changed.
+06/20/2017 22:22:41  Function:  Injector Breakpoint - FN389 / FUEL_BKPT (lbs/rev) changed.
+06/20/2017 22:23:05  Function:  Injector Breakpoint - FN389 / FUEL_BKPT (lbs/rev) changed.
+06/20/2017 22:24:29  Function:  Injector Breakpoint - FN389 / FUEL_BKPT (lbs/rev) changed.
+06/20/2017 22:25:26  Function:  Injector Breakpoint - FN389 / FUEL_BKPT (lbs/rev) changed.
+06/20/2017 22:25:48  Function:  Injector Breakpoint - FN389 / FUEL_BKPT (lbs/rev) changed.
+06/20/2017 22:46:28  Function:  Injector Breakpoint - FN389 / FUEL_BKPT (lbs/rev) changed.
+06/20/2017 22:48:16  Function:  Injector Breakpoint - FN389 / FUEL_BKPT (lbs/rev) changed.
+06/20/2017 23:00:28  Function:  Injector Offset - FN367 changed.

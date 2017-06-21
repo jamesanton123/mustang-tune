@@ -6,12 +6,13 @@ egr and thermactor are disabled by default in a9l2
 
 Done:
 	ALOSL, AHISL	Injector Slopes	Input your injector's manufacturer's recommended values if available or scaled percentage, see Note** below for no data 
-
-TODO:	
-
-	SARCHG			Cubic Inch Displacement
 	FN 389			Injector Breakpoint
 	FN 367			Injector Offset	
+	
+	
+TODO:	
+
+
 	FN 904A			Sealevel Spark Table
 	FN 035			Load Scaling
 	FN 348			Crank PW
@@ -22,7 +23,8 @@ Unscaled injector data
 	Siemens Deka 60 lb/hr
 	Low Slope	63.187
 	High Slope	60.267
-	Breakpoint	0.00003363 
+	Breakpoint	0.00003363 on efidynotune data, but I used 3.363 as per https://eectuning.org/forums/viewtopic.php?p=95717	
+	voltage offset(ms)
 	16.00	0.312
 	15.00	0.312
 	14.00	0.409
@@ -34,4 +36,9 @@ Unscaled injector data
 	6.00	2.59
 	0.00	2.59
 	0.00	2.59
-	0.00	2.59
+	0.00	2.59 
+	
+
+
+Cranking PW's I'll multiply the factory A9L settings by .317 (got this by doing 19/60)
+	
