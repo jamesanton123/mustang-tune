@@ -1,0 +1,1090 @@
+<ADXFORMAT version="1.01">
+  <!-- Written 07/12/2014 15:21:02 -->
+  <ADXHEADER>
+    <guid>19f28e4c-90d8-4aca-bbb2-b86e27a45e76</guid>
+    <flags>0x10000</flags>
+    <objectcount>82</objectcount>
+    <userversion>2.0</userversion>
+    <author>Sailorbob / Craig Moates / Decipha</author>
+    <desc>This GUFB Datalogging definition is for use with the Quarterhorse 1.6+ and TunerPro RT.&#013;&#010;</desc>
+    <baud>921600</baud>
+    <DEFAULTS datasizeinbits="8" sigdigits="2" outputtype="3" baud="0" signed="0" lsbfirst="0" float="0" />
+    <connectcmd>QH_CONFIG</connectcmd>
+    <monitorcmd>QH_HARVEST</monitorcmd>
+    <disconnectcmd>DISCON</disconnectcmd>
+    <pausecmd>DISCON</pausecmd>
+    <unpausecmd>QH_CONFIG</unpausecmd>
+  </ADXHEADER>
+
+  <ADXVALUE id="ACT" idhash="0xCD12BE5B" title="ACT">
+    <desc>Aircharge Temperature</desc>
+    <flags>0x0000000D</flags>
+    <packetoffset>0x0A</packetoffset>
+    <range low="-256.000000" high="254.000000" />
+    <alarms low="20.000000" high="220.000000" />
+    <digcount>0</digcount>
+    <outputtype>1</outputtype>
+    <datatype>19</datatype>
+    <unittype>14</unittype>
+    <MATH equation="X*2">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="AEFUEL" idhash="0x86630368" title="AEFUEL">
+    <flags>0x00000002</flags>
+    <packetoffset>0x2F</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>4</digcount>
+    <outputtype>3</outputtype>
+    <unittype>12</unittype>
+    <MATH equation="X * 1.17">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="ARCHG" idhash="0x46803AD4" title="Air Charge">
+    <flags>0x00000002</flags>
+    <packetoffset>0x41</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="x/16.77">
+      <VAR varID="x" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="ARCHFG" idhash="0xD004BB68" title="Air Charge Filtered">
+    <flags>0x00000002</flags>
+    <packetoffset>0x45</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/16.777216">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="ARCHI" idhash="0x46802F94" title="Air Charge Instantaneous">
+    <flags>0x00000002</flags>
+    <packetoffset>0x43</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/16.777216">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="AIR37" idhash="0x4B80F374" title="Air Charge Max">
+    <desc>Airmass clip of FN037</desc>
+    <flags>0x00000002</flags>
+    <packetoffset>0x58</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>0</digcount>
+    <outputtype>1</outputtype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RAWAIRCHG" idhash="0x747B2244" title="Air Charge Raw">
+    <flags>0x00000002</flags>
+    <packetoffset>0x56</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/16.777216">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="APT" idhash="0xCD105E5B" title="APT">
+    <desc>Throttle Status - At Part Throttle</desc>
+    <flags>0x0000000D</flags>
+    <packetoffset>0x0D</packetoffset>
+    <range low="-1.000000" high="1.000000" />
+    <alarms low="-1.000000" high="1.000000" />
+    <digcount>0</digcount>
+    <outputtype>1</outputtype>
+    <datatype>57</datatype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXHISTOGRAM id="WB_MAF_TPS" idhash="0x43271D54" title="WB vs MAF vs TPS">
+    <rows>5</rows>
+    <cols>6</cols>
+    <xmin>0.000000</xmin>
+    <xmax>0.000000</xmax>
+    <ymin>0.000000</ymin>
+    <ymax>0.000000</ymax>
+    <rowval index="0" val="1.000000" />
+    <rowval index="1" val="2.000000" />
+    <rowval index="2" val="3.000000" />
+    <rowval index="3" val="4.000000" />
+    <rowval index="4" val="5.000000" />
+    <colval index="0" val="1000.000000" />
+    <colval index="1" val="2000.000000" />
+    <colval index="2" val="3000.000000" />
+    <colval index="3" val="4000.000000" />
+    <colval index="4" val="5000.000000" />
+    <colval index="5" val="6000.000000" />
+    <historysize>10</historysize>
+    <xidhash>0x86F3491B</xidhash>
+    <yidhash>0xAA416139</yidhash>
+    <zidhash>0xA0D238B9</zidhash>
+  </ADXHISTOGRAM>
+
+  <ADXMACRO id="QH_CONFIG" idhash="0x8B150DFA" title="Configure QH for Payload" repeatcount="1">
+    <NODE commandID="WAIT" repeatcount="1" />
+    <NODE commandID="WRITE_PATCH_1" repeatcount="1" />
+    <NODE commandID="PATCH_RESP" repeatcount="1" />
+    <NODE commandID="QH_CONFIG_1" repeatcount="1" />
+    <NODE commandID="QH_CONFIG_2" repeatcount="1" />
+    <NODE commandID="QH_CONFIG_OK" repeatcount="1" />
+  </ADXMACRO>
+
+  <ADXLISTVIEW id="Payloads" idhash="0xC83469DF" title="Payloads">
+    <entrycount>23</entrycount>
+    <ADXLVENTRY entrytype="1" flags="0x00000001" title="Min Required Payloads" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x86F3491B" color="000000FF" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xDE6A22B0" color="000000FF" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xAA416139" color="000000FF" />
+    <ADXLVENTRY entrytype="1" flags="0x00000001" color="000000FF" />
+    <ADXLVENTRY entrytype="1" flags="0x00000001" title="Spark Payloads" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xCD12BE5B" color="00FF8000" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xAA726CF9" color="00FF8000" />
+    <ADXLVENTRY entrytype="1" flags="0x00000001" />
+    <ADXLVENTRY entrytype="1" flags="0x00000001" title="Idle / Dashpot Payloads" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x80A6D97C" color="00008000" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xE8AF98D3" color="00008000" />
+    <ADXLVENTRY entrytype="1" flags="0x00000001" />
+    <ADXLVENTRY entrytype="1" flags="0x00000001" title="Fuel Payloads" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xCD1ABE5B" color="000080FF" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x1E32305C" color="000080FF" />
+    <ADXLVENTRY entrytype="0" itemidhash="0x1E322AFC" color="000080FF" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xE0853943" color="000080FF" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xE08523E3" color="000080FF" />
+    <ADXLVENTRY entrytype="1" flags="0x00000001" />
+    <ADXLVENTRY entrytype="1" flags="0x00000001" title="Generic Payloads" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xE0F08349" />
+    <ADXLVENTRY entrytype="0" itemidhash="0xAA42E339" />
+  </ADXLISTVIEW>
+
+  <ADXCSENDCOMMAND id="WRITE_PATCH_1" idhash="0x8EF3433E" title="Write Patch Code">
+    <desc>Assumes GUFB running on &#013;&#010;&quot;Bank 1&quot; in TP settings.&#013;&#010;</desc>
+    <SNDCMDCHECKSUM type="1" />
+    <bytestring size="0x43">573E0784B2A1E48442A24314A2141CC315000D1C8A4200D7F0A12220143C2401FBA1F00018B30120201AA2151CC2191CE01AF771EF24F0B000AE00AA00D00000000000</bytestring>
+  </ADXCSENDCOMMAND>
+
+  <ADXCLISTENPACKET id="PATCH_RESP" idhash="0x82D78F9B" title="Write Patch Response" flags="0x00000004">
+    <listentimeout>400</listentimeout>
+    <packetbodylength>0</packetbodylength>
+    <packetoffsetinbody>0</packetoffsetinbody>
+    <packetsize>0</packetsize>
+    <headerstring size="1">4F</headerstring>
+  </ADXCLISTENPACKET>
+
+  <ADXCSENDCOMMAND id="VER_REQ" idhash="0xC8E6A831" title="Request Version">
+    <bytestring size="0x2">5656</bytestring>
+  </ADXCSENDCOMMAND>
+
+  <ADXCLISTENPACKET id="VERSION_RESP" idhash="0x08C5C68A" title="Version Response" flags="0x00000004">
+    <listentimeout>400</listentimeout>
+    <packetbodylength>2</packetbodylength>
+    <packetoffsetinbody>0</packetoffsetinbody>
+    <packetsize>2</packetsize>
+    <footerstring size="1">51</footerstring>
+  </ADXCLISTENPACKET>
+
+  <ADXBITMASK id="FLAGS3_0" idhash="0xEA1A51BF" title="MAF Error">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x00</packetoffset>
+    <operand>0x00000001</operand>
+    <bitop>AND</bitop>
+    <result>0x00000001</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="FLAGS3_1" idhash="0xEA1A5FFF" title="Air Filling">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x00</packetoffset>
+    <operand>0x00000002</operand>
+    <bitop>AND</bitop>
+    <result>0x00000002</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="FLAGS3_2" idhash="0xEA1A455F" title="DNDSUP">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x00</packetoffset>
+    <operand>0x00000004</operand>
+    <bitop>AND</bitop>
+    <result>0x00000004</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="FLAGS3_3" idhash="0xEA1A5A5F" title="AFR Reset">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x00</packetoffset>
+    <operand>0x00000008</operand>
+    <bitop>AND</bitop>
+    <result>0x00000008</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="FLAGS3_4" idhash="0xEA1A585F" title="Trans Spk">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x00</packetoffset>
+    <operand>0x00000010</operand>
+    <bitop>AND</bitop>
+    <result>0x00000010</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="FLAGS3_5" idhash="0xEA1A4F3F" title="Flags 3 Bit 5">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x00</packetoffset>
+    <operand>0x00000020</operand>
+    <bitop>AND</bitop>
+    <result>0x00000020</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="FLAGS3_6" idhash="0xEA1A4C9F" title="Gear">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x00</packetoffset>
+    <operand>0x00000040</operand>
+    <bitop>AND</bitop>
+    <result>0x00000040</result>
+  </ADXBITMASK>
+
+  <ADXBITMASK id="FLAGS3_7" idhash="0xEA1A56DF" title="HCAMFG">
+    <truestring>True</truestring>
+    <falsestring>False</falsestring>
+    <ALARMONSET color="0x000000FF" />
+    <ALARMONNOTSET color="0x0000FF00" />
+    <packetoffset>0x00</packetoffset>
+    <operand>0x00000080</operand>
+    <bitop>AND</bitop>
+    <result>0x00000080</result>
+  </ADXBITMASK>
+
+  <ADXVALUE id="BG_TMR" idhash="0xE61C04DC" title="Background Timer">
+    <packetoffset>0x53</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/1024">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="BP" idhash="0xDE6BCEB0" title="BP">
+    <desc>Barometric Pressure Sensor</desc>
+    <packetoffset>0x20</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/8">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="PURGDC" idhash="0x4E6A9459" title="Canister Purge DC">
+    <desc>Canister Purge Duty Cycle</desc>
+    <packetoffset>0x1F</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/128">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="LAMMUL" idhash="0xE0F08349" title="Cold Engine Fuel Multiplier">
+    <flags>0x00000002</flags>
+    <packetoffset>0x28</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/256">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="CTNTMR" idhash="0xFB5C04D6" title="CT Neutral Timer">
+    <desc>Closed throttle neutral timer</desc>
+    <packetoffset>0x21</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>0</digcount>
+    <outputtype>1</outputtype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="DASHPOT" idhash="0x18E83FE4" title="Dashpot">
+    <flags>0x00000002</flags>
+    <packetoffset>0x25</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="3.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>4</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/4096">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="DSDRPM" idhash="0x80A6D97C" title="DSDRPM">
+    <desc>Desired RPM at Idle</desc>
+    <packetoffset>0x27</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>0</digcount>
+    <outputtype>1</outputtype>
+    <datatype>37</datatype>
+    <unittype>4</unittype>
+    <MATH equation="X*16">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="ECT" idhash="0xCD1ABE5B" title="ECT">
+    <desc>Engine Coolant Temp</desc>
+    <flags>0x0000000D</flags>
+    <packetoffset>0x09</packetoffset>
+    <range low="-256.000000" high="254.000000" />
+    <alarms low="160.000000" high="238.000000" />
+    <digcount>0</digcount>
+    <outputtype>3</outputtype>
+    <datatype>13</datatype>
+    <unittype>14</unittype>
+    <MATH equation="X*2">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="EFTRFF" idhash="0xD74524CD" title="EFTRFF">
+    <desc>Transient Enrichment Fuel</desc>
+    <flags>0x00000003</flags>
+    <packetoffset>0x2D</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>4</digcount>
+    <outputtype>3</outputtype>
+    <unittype>12</unittype>
+    <MATH equation="X * 1.17">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="EGRFLO" idhash="0x2415458C" title="EGR Mass Flow">
+    <packetoffset>0x4B</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/128">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="EGRDC" idhash="0x61211DF4" title="EGR Position">
+    <flags>0x00000002</flags>
+    <packetoffset>0x0E</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="2.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/32768">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="EVP" idhash="0xCD1B53DB" title="EGR Valve Position">
+    <desc>Can be used to log a wideband or 5v input</desc>
+    <flags>0x00000002</flags>
+    <packetoffset>0x15</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="5.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/12800">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="Fuel_Error" idhash="0x53E006CB" title="Fuel_Error">
+    <desc>This can be considered a multiplier which would correct the fueling if it had been applied when in closed loop ONLY.</desc>
+    <flags>0x0000000C</flags>
+    <units>%</units>
+    <packetoffset>0x00</packetoffset>
+    <range low="0.500000" high="1.500000" />
+    <alarms low="0.750000" high="1.250000" />
+    <digcount>3</digcount>
+    <outputtype>3</outputtype>
+    <datatype>46</datatype>
+    <unittype>67</unittype>
+    <MATH equation="(1/Y)*X">
+      <VAR varID="Y" type="link" linkIDHash="0x1E32305C" />
+      <VAR varID="X" type="link" linkIDHash="0xE08523E3" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="FUELPW1" idhash="0x9318D5A9" title="FUELPW1">
+    <desc>Bank 1 Injector Pulse Length</desc>
+    <flags>0x00000002</flags>
+    <packetoffset>0x34</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="25.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>51</datatype>
+    <unittype>85</unittype>
+    <MATH equation="X*.0048">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="FUELPW2" idhash="0x9318CF09" title="FUELPW2">
+    <desc>Bank 2 Injector Pulse Length</desc>
+    <flags>0x00000002</flags>
+    <packetoffset>0x36</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="25.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X*.0048">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IPSIBR" idhash="0xE8AF98D3" title="Idle Air Integrator">
+    <flags>0x0000000F</flags>
+    <packetoffset>0x22</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="-1.000000" high="1.000000" />
+    <alarms low="-0.400000" high="0.400000" />
+    <digcount>4</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/4096">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="ISCFLG" idhash="0xC2454F52" title="Idle Speed Control Flag">
+    <packetoffset>0x24</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>0</digcount>
+    <outputtype>1</outputtype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IEGO1" idhash="0x9A4C0255" title="IEGO1">
+    <desc>Passenger Side Hego Voltage</desc>
+    <flags>0x00000006</flags>
+    <packetoffset>0x17</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="0.750000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>60</datatype>
+    <unittype>32</unittype>
+    <MATH equation="(5.12-(X/12800))/2">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IEGO2" idhash="0x9A4C18F5" title="IEGO2">
+    <desc>HEGO 2 Sensor Driver Side</desc>
+    <flags>0x00000006</flags>
+    <packetoffset>0x19</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="1.000000" />
+    <alarms low="0.000000" high="0.750000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>59</datatype>
+    <unittype>32</unittype>
+    <MATH equation="(5.12-(X/12800))/2">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="IMAF" idhash="0xACB16139" title="IMAF">
+    <desc>raw uncorrected maf voltage</desc>
+    <flags>0x0000000E</flags>
+    <packetoffset>0x1B</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="5.000000" />
+    <alarms low="0.150000" high="4.800000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/12800">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="INJDC" idhash="0x9DF71DF5" title="INJDC">
+    <desc>Injector Duty  Cycle</desc>
+    <flags>0x00000004</flags>
+    <packetoffset>0x00</packetoffset>
+    <range low="0.000000" high="100.000000" />
+    <alarms low="0.000000" high="80.000000" />
+    <digcount>0</digcount>
+    <outputtype>3</outputtype>
+    <datatype>51</datatype>
+    <unittype>67</unittype>
+    <MATH equation="X / (1200 / Y) ">
+      <VAR varID="X" type="link" linkIDHash="0x9318D5A9" />
+      <VAR varID="Y" type="link" linkIDHash="0x86F3491B" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="PWOFS" idhash="0xCFF52074" title="Injector PW Offset (mSec)">
+    <packetoffset>0x33</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/32">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="PWOFF" idhash="0xCFF52D74" title="Injector PW Offset (ticks)">
+    <flags>0x00000002</flags>
+    <packetoffset>0x31</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>0</digcount>
+    <outputtype>1</outputtype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="AMINT" idhash="0x4858FB74" title="Integrated Air Mass Flow">
+    <flags>0x00000006</flags>
+    <packetoffset>0x54</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>1</outputtype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="ISCDC" idhash="0x96139DF5" title="ISCDC">
+    <desc>Idle Speed Control Duty Cycle</desc>
+    <flags>0x00000006</flags>
+    <packetoffset>0x0B</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="200.000000" />
+    <alarms low="10.000000" high="101.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>36</datatype>
+    <unittype>68</unittype>
+    <MATH equation="X/327.68">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="ISCKAM3" idhash="0x41B92698" title="ISCKAM3">
+    <desc>ISCKAM Neutral AC On</desc>
+    <flags>0x00000007</flags>
+    <packetoffset>0x64</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="2.000000" />
+    <alarms low="0.000000" high="0.400000" />
+    <digcount>3</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/4096">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="ISCKAM2" idhash="0x41B93998" title="ISCKAM2">
+    <desc>ISC KAM Neutral AC Off</desc>
+    <flags>0x00000007</flags>
+    <packetoffset>0x62</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="2.000000" />
+    <alarms low="0.000000" high="0.400000" />
+    <digcount>3</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/4096">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="ISCKAM1" idhash="0x41B92338" title="ISCKAM1">
+    <desc>ISC KAM Drive AC On</desc>
+    <flags>0x00000007</flags>
+    <packetoffset>0x60</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="2.000000" />
+    <alarms low="0.000000" high="0.400000" />
+    <digcount>3</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/4096">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="ISCKAM0" idhash="0x41B92D78" title="ISCKAM0">
+    <desc>ISC KAM Drive AC Off</desc>
+    <flags>0x00000007</flags>
+    <packetoffset>0x5E</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="2.000000" />
+    <alarms low="0.000000" high="0.400000" />
+    <digcount>3</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/4096">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="KAMRF2" idhash="0xE0853943" title="KAMRF2">
+    <desc>KAM Fuel Correction Bank 2 Driver Side</desc>
+    <flags>0x0000000E</flags>
+    <packetoffset>0x5C</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="2.000000" />
+    <alarms low="0.850000" high="1.150000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/256">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="KAMRF1" idhash="0xE08523E3" title="KAMRF1">
+    <desc>KAM Fuel Correction Bank 1 Passenger Side</desc>
+    <flags>0x0000000E</flags>
+    <packetoffset>0x5A</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="2.000000" />
+    <alarms low="0.850000" high="1.150000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/256">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="LAMBSE1" idhash="0x1E32305C" title="LAMBSE1">
+    <desc>Bank 1 Passenger Side Fuel Commanded</desc>
+    <flags>0x0000000E</flags>
+    <packetoffset>0x38</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="2.000000" />
+    <alarms low="0.700000" high="1.200000" />
+    <digcount>3</digcount>
+    <outputtype>3</outputtype>
+    <datatype>31</datatype>
+    <unittype>22</unittype>
+    <MATH equation="X/32768">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="LAMBSE2" idhash="0x1E322AFC" title="LAMBSE2">
+    <desc>Bank 2 Fuel Commanded</desc>
+    <flags>0x0000000E</flags>
+    <packetoffset>0x3A</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="2.000000" />
+    <alarms low="0.700000" high="1.200000" />
+    <digcount>3</digcount>
+    <outputtype>3</outputtype>
+    <datatype>31</datatype>
+    <unittype>22</unittype>
+    <MATH equation="X / 32768">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="LOAD" idhash="0xAA726CF9" title="LOAD">
+    <desc>Volumetric Effeciency Equivalency</desc>
+    <flags>0x00000006</flags>
+    <packetoffset>0x47</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="200.000000" />
+    <alarms low="0.000000" high="190.000000" />
+    <digcount>0</digcount>
+    <outputtype>3</outputtype>
+    <datatype>23</datatype>
+    <MATH equation="X/327.68">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="MAF" idhash="0xCD7B4C5B" title="MAF">
+    <desc>Mass Air Flow</desc>
+    <flags>0x00000002</flags>
+    <packetoffset>0x3F</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>26</datatype>
+    <unittype>13</unittype>
+    <MATH equation="X*0.31683">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="PERLOAD" idhash="0xC1337CB1" title="PERLOAD">
+    <desc>Scaled Maximum Load</desc>
+    <flags>0x00000006</flags>
+    <packetoffset>0x49</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="200.000000" />
+    <alarms low="0.000000" high="100.000000" />
+    <digcount>0</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/327.68">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="RATCH" idhash="0x37392D34" title="RATCH">
+    <desc>Throttle Position Ratched Min Voltage</desc>
+    <flags>0x0000000E</flags>
+    <packetoffset>0x1D</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="2.000000" />
+    <alarms low="0.400000" high="1.500000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/12800">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="N" idhash="0x86F3491B" title="RPM">
+    <flags>0x0000000E</flags>
+    <packetoffset>0x07</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="7500.000000" />
+    <alarms low="400.000000" high="6400.000000" />
+    <digcount>0</digcount>
+    <outputtype>3</outputtype>
+    <datatype>6</datatype>
+    <unittype>4</unittype>
+    <MATH equation="X/4">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="N_BYTE" idhash="0xD2C971D3" title="RPM_LOW">
+    <desc>Low Resolution RPM</desc>
+    <packetoffset>0x51</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>0</digcount>
+    <outputtype>1</outputtype>
+    <MATH equation="X*16">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="SAFTOT" idhash="0xA60F0EFC" title="Spark Advance">
+    <desc>Spark Total Output to Engine</desc>
+    <flags>0x00000002</flags>
+    <packetoffset>0x4C</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="60.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>38</datatype>
+    <unittype>23</unittype>
+    <MATH equation="X/4">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="SAPW" idhash="0xAF2A6319" title="Spark Angle Pulse-Width">
+    <desc>EDIS Output</desc>
+    <flags>0x00000002</flags>
+    <packetoffset>0x4E</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>0</digcount>
+    <outputtype>1</outputtype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="ISFLAG" idhash="0xC619DB52" title="Special Idle - Flag ">
+    <packetoffset>0x2A</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>0</digcount>
+    <outputtype>1</outputtype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="ISLAST" idhash="0xC58806F2" title="Special Idle - Last Flag">
+    <flags>0x00000002</flags>
+    <packetoffset>0x2B</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>0</digcount>
+    <outputtype>1</outputtype>
+    <MATH equation="X">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="TAR" idhash="0xCD455C7B" title="Throttle Angle Rate">
+    <packetoffset>0x50</packetoffset>
+    <range low="0.000000" high="255.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <MATH equation="X/2">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="TP" idhash="0xDE6A22B0" title="Throttle Position Sensor">
+    <flags>0x00000002</flags>
+    <packetoffset>0x05</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="5.000000" />
+    <alarms low="0.000000" high="255.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>57</datatype>
+    <unittype>32</unittype>
+    <MATH equation="X/12800">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="VSBAR" idhash="0x48075D55" title="VSBAR">
+    <desc>VSS - Vehicle Speed Sensor (MPH)</desc>
+    <flags>0x00000004</flags>
+    <packetoffset>0x52</packetoffset>
+    <range low="0.000000" high="127.500000" />
+    <alarms low="0.000000" high="127.500000" />
+    <digcount>1</digcount>
+    <outputtype>3</outputtype>
+    <datatype>5</datatype>
+    <unittype>5</unittype>
+    <MATH equation="X/2">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXMONITOR id="chart1" idhash="0x30E327C0" title="Realtime Chart">
+    <mainbkgcolor>0x00000000</mainbkgcolor>
+    <plotbkgcolor>0x00808080</plotbkgcolor>
+    <plotoutlinecolor>0x00004080</plotoutlinecolor>
+    <titlecolor>0x00000080</titlecolor>
+    <timeaxiscolor>0x00000040</timeaxiscolor>
+    <entrycount>5</entrycount>
+    <ADXMONSERIES linewidth="6" linecolor="0x0000FF" axiscolor="0x0000FF" itemidhash="0x86F3491B" />
+    <ADXMONSERIES linecolor="0x0EE6F1" axiscolor="0x0EE6F1" itemidhash="0xC1337CB1" />
+    <ADXMONSERIES linecolor="0xFF0000" axiscolor="0xFF0000" itemidhash="0xAA416139" />
+    <ADXMONSERIES linecolor="0x00FF00" axiscolor="0x00FF00" itemidhash="0xA60F0EFC" />
+    <ADXMONSERIES linecolor="0xC8C800" axiscolor="0xC8C800" itemidhash="0xAA42E339" />
+  </ADXMONITOR>
+
+  <ADXDASHBOARD id="Dashboard" idhash="0x56F12DD7" title="Realtime Tuning View">
+    <desc>Realtime View of Payloads while Datalogging&#013;&#010;by decipha@efidynotuning.com</desc>
+    <bkgrndcolor>0x00000000</bkgrndcolor>
+    <entrycount>39</entrycount>
+    <ADXDGENTRY gaugetype="1" itemidhash="0xAA416139" left="84" top="84" right="98" bottom="98" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" alarmhighcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xC1337CB1" left="70" top="84" right="84" bottom="98" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" alarmhighcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x86F3491B" left="56" top="84" right="70" bottom="98" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x9318CF09" left="42" top="84" right="56" bottom="98" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x9318D5A9" left="28" top="84" right="42" bottom="98" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xAA42E339" left="14" top="84" right="28" bottom="98" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xCD12BE5B" left="0" top="84" right="14" bottom="98" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xACB16139" left="84" top="70" right="98" bottom="84" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xAF2A6319" left="70" top="70" right="84" bottom="84" bkgndcolor="0x00000000" bordercolor="0x00000000" curvaltxtcolor="0x00000000" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x48075D55" left="56" top="70" right="70" bottom="84" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" alarmlowcolor="0x00C0C0C0" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xAF2A6319" left="42" top="70" right="56" bottom="84" bkgndcolor="0x00000000" bordercolor="0x00000000" curvaltxtcolor="0x00000000" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x9DF71DF5" left="28" top="70" right="42" bottom="84" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xDE6BCEB0" left="14" top="70" right="28" bottom="84" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xCD1ABE5B" left="0" top="70" right="14" bottom="84" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x9A4C18F5" left="84" top="56" right="98" bottom="70" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" alarmhighcolor="0x0080FFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x9A4C0255" left="70" top="56" right="84" bottom="70" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" alarmhighcolor="0x0080FFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xDE6A22B0" left="56" top="56" right="70" bottom="70" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x86630368" left="42" top="56" right="56" bottom="70" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xD74524CD" left="28" top="56" right="42" bottom="70" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x41B92338" left="14" top="56" right="28" bottom="70" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x41B92D78" left="0" top="56" right="14" bottom="70" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xE0853943" left="84" top="42" right="98" bottom="56" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xE08523E3" left="70" top="42" right="84" bottom="56" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x53E006CB" left="56" top="42" right="70" bottom="56" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xAF2A6319" left="42" top="42" right="56" bottom="56" bkgndcolor="0x00000000" bordercolor="0x00000000" curvaltxtcolor="0x00000000" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xAF2A6319" left="28" top="42" right="42" bottom="56" bkgndcolor="0x00000000" bordercolor="0x00000000" curvaltxtcolor="0x00000000" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x41B92698" left="14" top="42" right="28" bottom="56" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x41B93998" left="0" top="42" right="14" bottom="56" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x1E322AFC" left="84" top="28" right="98" bottom="42" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x1E32305C" left="70" top="28" right="84" bottom="42" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xA0D238B9" left="56" top="28" right="70" bottom="42" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xA60F0EFC" left="42" top="28" right="56" bottom="42" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xAA726CF9" left="28" top="28" right="42" bottom="42" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0x96139DF5" left="14" top="28" right="28" bottom="42" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="1" itemidhash="0xE8AF98D3" left="0" top="28" right="14" bottom="42" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" curvaltxtcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="0" itemidhash="0xACB16139" left="75" top="0" right="98" bottom="20" arcmin="90" arcmax="270" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" facecolor="0x00000000" bezelcolor="0x00FFFFFF" majtickcolor="0x00FFFFFF" ticktxtnormcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="0" itemidhash="0x53E006CB" left="50" top="0" right="73" bottom="20" arcmin="90" arcmax="270" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" facecolor="0x00000000" bezelcolor="0x00FFFFFF" majtickcolor="0x00FFFFFF" ticktxtnormcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="0" itemidhash="0x86F3491B" left="25" top="0" right="48" bottom="20" arcmin="90" arcmax="270" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" facecolor="0x00000000" bezelcolor="0x00FFFFFF" majtickcolor="0x00FFFFFF" ticktxtnormcolor="0x00FFFFFF" />
+    <ADXDGENTRY gaugetype="0" itemidhash="0xDE6A22B0" left="0" top="0" right="23" bottom="20" arcmin="90" arcmax="270" bkgndcolor="0x00000000" titlecolor="0x00FFFFFF" unitscolor="0x00FFFFFF" bordercolor="0x00000000" facecolor="0x00000000" bezelcolor="0x00FFFFFF" majtickcolor="0x00FFFFFF" ticktxtnormcolor="0x00FFFFFF" />
+  </ADXDASHBOARD>
+
+  <ADXVALUE id="VBAT" idhash="0xAA42E339" title="VBAT">
+    <desc>Battery Voltage</desc>
+    <flags>0x0000000C</flags>
+    <packetoffset>0x3C</packetoffset>
+    <range low="0.000000" high="16.000000" />
+    <alarms low="11.000000" high="15.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>66</datatype>
+    <unittype>32</unittype>
+    <MATH equation="X/16">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="VMAF" idhash="0xAA416139" title="VMAF">
+    <desc>MAF Voltage into FN036 MAF Transfer</desc>
+    <flags>0x0000000E</flags>
+    <packetoffset>0x3D</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="0.000000" high="5.000000" />
+    <alarms low="0.150000" high="4.750000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>26</datatype>
+    <unittype>32</unittype>
+    <MATH equation="X/4096">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXVALUE id="WBo2" idhash="0xA0D238B9" title="WBo2">
+    <desc>Wideband o2 Sensor</desc>
+    <flags>0x00000002</flags>
+    <units>AFR</units>
+    <packetoffset>0x15</packetoffset>
+    <sizeinbits>16</sizeinbits>
+    <range low="10.000000" high="20.000000" />
+    <alarms low="10.000000" high="18.000000" />
+    <digcount>2</digcount>
+    <outputtype>3</outputtype>
+    <datatype>30</datatype>
+    <unittype>21</unittype>
+    <MATH equation="7.35 + ( X / 4267 )">
+      <VAR varID="X" type="native" />
+    </MATH>
+  </ADXVALUE>
+
+  <ADXMACRO id="QH_HARVEST" idhash="0x495C6525" title="Harvest Data Macro" repeatcount="1">
+    <NODE commandID="WAIT" repeatcount="1" />
+    <NODE commandID="QH_QUERY" repeatcount="1" />
+    <NODE commandID="QH_PACKET" repeatcount="1" />
+  </ADXMACRO>
+
+  <ADXCSENDCOMMAND id="QH_QUERY" idhash="0xAC443901" title="Query">
+    <bytestring size="0x1">71</bytestring>
+  </ADXCSENDCOMMAND>
+
+  <ADXCLISTENPACKET id="QH_PACKET" idhash="0xA64C6C74" title="Data Packet" flags="0x00000005">
+    <listentimeout>400</listentimeout>
+    <packetbodylength>103</packetbodylength>
+    <packetoffsetinbody>0</packetoffsetinbody>
+    <packetsize>103</packetsize>
+  </ADXCLISTENPACKET>
+
+  <ADXCSENDCOMMAND id="QH_CONFIG_1" idhash="0x54342B4C" title="Config Part 1 of Q">
+    <bytestring size="0x82">514001030D2601030D2701030D2801030D2901030D2E02030DAA02030DAE01030DB001030DB102030DB801030DD002030DD201030DE701030DE901030DEC01030DEE01030DEF020301160203011C0203011E02030124020301260103012C0103012F0103014402030154010301570203015C01030166020301680103016B0203016C</bytestring>
+  </ADXCSENDCOMMAND>
+
+  <ADXCSENDCOMMAND id="QH_CONFIG_2" idhash="0x543431EC" title="Config Part 2 of Q">
+    <bytestring size="0x81">020301880203018C0203018E0103019302030206020302080203020A0203020C010302110203024E020302500203025202030256020302580203025C02030260010302880203029A0203029C0103029E0103029F010302BD010302DC0203032A02030330020303A6020307B4020307B6020307E4020307E6020307E8020307EABB</bytestring>
+  </ADXCSENDCOMMAND>
+
+  <ADXCLISTENPACKET id="QH_CONFIG_OK" idhash="0x86873D6A" title="Config Reply to Q" flags="0x00000004">
+    <listentimeout>400</listentimeout>
+    <packetbodylength>0</packetbodylength>
+    <packetoffsetinbody>0</packetoffsetinbody>
+    <packetsize>0</packetsize>
+    <headerstring size="1">4F</headerstring>
+  </ADXCLISTENPACKET>
+
+  <ADXMACRO id="DISCON" idhash="0xFEA5165C" title="Disconnect" repeatcount="1">
+    <NODE commandID="WAIT" repeatcount="1" />
+    <NODE commandID="VER_REQ" repeatcount="1" />
+    <NODE flags="0x00000005" commandID="VERSION_RESP" repeatcount="1" />
+  </ADXMACRO>
+
+  <ADXCLISTENSILENCE id="WAIT" idhash="0xA0B8DF39" title="Pause for Data Rate">
+    <silencelen>0</silencelen>
+    <totaltimeout>100</totaltimeout>
+  </ADXCLISTENSILENCE>
+</ADXFORMAT>
