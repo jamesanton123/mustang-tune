@@ -1,6 +1,4 @@
-Use specs from for lightning 90mm maf
-	http://www.efidynotuning.com/maf.htm
-	copy and paste them into "FN 036"
+
 	
 egr and thermactor are disabled by default in a9l2
 
@@ -9,11 +7,26 @@ Done:
 	FN 389			Injector Breakpoint
 	FN 367			Injector Offset	
 	FN 348			Crank PW  (when x >=180, I set y to 1.14. This was done by calculating 3.55 * (19/60) ).
-
+	FN 036			Use specs from for lightning 90mm maf http://www.efidynotuning.com/maf.htm
+	Tune maf at different mafV values
+	Take car for test run
 	
+	Load scaled
+	0			0
+	1300		44
+	2600		64
+	3900		72
+	5200		67
+	6500		
+	
+	
+		
 TODO:
 	FN 904A			Sealevel Spark Table
-	FN 035			Load Scaling
+	FN 035			Load Scaling (do this with supercharger belt removed in second gear, and every 1300 rpm, not the maximum load you can achieve)
+	Need to dial in fuel by either injector slopes or maf transfer (@decipha https://eectuning.org/forums/viewtopic.php?t=19709)
+	adjust the maf curve or injector values to get the wideband to spit out the afr the ecu is telling it to (LAMBSE) the LAMBSE is the Lambda (AFR) the ecu is DEMANDING, if your lambse is 1.160 at WOT and your wideband reads 0.990 lambda at WOT then you are RICH and you need to pull some fuel out just for clarification
+
 	
 Unscaled injector data
 	FRPP 60 lb/hr @ 39.15psi
